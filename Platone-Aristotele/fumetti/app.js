@@ -12,6 +12,7 @@ function closeReader(){reader.classList.remove('open');reader.setAttribute('aria
 function move(delta){const index=currentList.indexOf(currentId);const id=currentList[index+delta];if(id)openEpisode(id)}
 document.querySelector('.filters').addEventListener('click',event=>{const button=event.target.closest('[data-author]');if(!button)return;author=button.dataset.author;document.querySelectorAll('[data-author]').forEach(x=>x.classList.toggle('active',x===button));render()});
 search.addEventListener('input',()=>{query=search.value;render()});cards.addEventListener('click',event=>{const button=event.target.closest('[data-id]');if(button)openEpisode(button.dataset.id)});
+document.querySelectorAll('[data-overview]').forEach(button=>button.addEventListener('click',()=>openEpisode(button.dataset.overview)));
 document.querySelector('#readerClose').addEventListener('click',closeReader);reader.addEventListener('click',event=>{if(event.target===reader)closeReader()});prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));
 markRead.addEventListener('click',()=>{if(!currentId)return;read.add(currentId);localStorage.setItem('pa-fumetti-read',JSON.stringify([...read]));markRead.textContent='Letto ✓';render();say('Episodio segnato come letto.')});
 document.querySelector('#methodBtn').addEventListener('click',()=>methodDialog.showModal());document.querySelector('#methodClose').addEventListener('click',()=>methodDialog.close());
