@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071721">
+<meta name="description" content="Dizionario filosofico interattivo di Platone e Aristotele.">
+<title>Dizionario filosofico · Platone & Aristotele</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top"><a class="home" href="../" aria-label="Torna alla copertina">←</a><div class="brandIcon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M7 13c10-4 18-2 25 4v37c-7-6-15-8-25-4V13Zm50 0c-10-4-18-2-25 4v37c7-6 15-8 25-4V13Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M32 17v37" stroke="currentColor" stroke-width="3"/></svg></div><div class="topcopy"><strong>Dizionario filosofico</strong><small>Parole, concetti, relazioni</small></div><button id="randomBtn" class="tool">Parola casuale</button></header>
+<main>
+<section class="hero"><div class="wrap"><p class="eyebrow">Strumento 01 · Lessico</p><h1>Le parole con cui il pensiero prende forma.</h1><p class="lead">Ogni voce offre una definizione immediata e un secondo livello di approfondimento: termine greco, spiegazione, esempio, differenze tra Platone e Aristotele e rimandi alle lezioni.</p><div class="stats"><span id="totalCount">0 voci</span><span id="visibleCount">0 visibili</span><span id="savedCount">0 salvate</span></div></div></section>
+<section class="controls"><div class="wrap"><div class="searchRow"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Cerca termine, greco, definizione o tema"></label><button id="savedBtn" class="savedToggle">☆ Solo salvate</button></div><div class="filterBlock"><span>Autore</span><div id="authorFilters" class="filters"><button class="active" data-author="tutti">Tutti</button><button data-author="Platone">Platone</button><button data-author="Aristotele">Aristotele</button><button data-author="Entrambi">Entrambi</button><button data-author="Contesto">Contesto</button></div></div><div class="filterBlock"><span>Tema</span><div id="themeFilters" class="filters themeFilters"></div></div><nav id="alphabet" class="alphabet" aria-label="Indice alfabetico"></nav></div></section>
+<section class="catalog"><div class="wrap"><div class="catalogHead"><div><p class="eyebrow">Voci</p><h2 id="catalogTitle">Tutto il lessico</h2></div><button id="clearBtn" class="clearBtn">Azzera filtri</button></div><div id="terms" class="terms"></div><p id="empty" class="empty" hidden>Nessuna voce corrisponde alla ricerca.</p></div></section>
+<section class="method"><div class="wrap methodGrid"><article><p class="eyebrow">Definizione</p><h3>Prima capire</h3><p>Una frase breve chiarisce il nucleo del termine senza trasformarlo in uno slogan.</p></article><article><p class="eyebrow">Approfondimento</p><h3>Poi distinguere</h3><p>La scheda segnala differenze d’uso, problemi interpretativi e falsi equivalenti moderni.</p></article><article><p class="eyebrow">Rimandi</p><h3>Infine collegare</h3><p>Ogni parola conduce alle sezioni di Studio e Approfondisco in cui il concetto diventa problema.</p></article></div></section>
+</main>
+<section id="reader" class="reader" aria-hidden="true"><article class="readerPage"><header class="readerTop"><button id="readerClose" aria-label="Chiudi">×</button><div><strong id="readerTerm"></strong><small id="readerMeta"></small></div><div class="readerNav"><button id="prev" aria-label="Voce precedente">←</button><button id="next" aria-label="Voce successiva">→</button></div></header><div class="readerBody"><div class="termHero"><div><p id="readerTheme" class="eyebrow"></p><h1 id="readerTitle"></h1><p id="readerGreek" class="greek"></p></div><button id="saveTerm" class="saveTerm">☆ Salva</button></div><section class="definition"><p class="label">Definizione essenziale</p><p id="readerSimple"></p></section><div class="detailGrid"><section><p class="label">Spiegazione</p><div id="readerDeep" class="prose"></div></section><section><p class="label">Esempio</p><div id="readerExample" class="example"></div></section><section><p class="label">Confronto</p><div id="readerCompare" class="compare"></div></section><section><p class="label">Opere e passi</p><ul id="readerRefs" class="refs"></ul></section></div><div class="readerActions"><a id="studyLink" href="../studio/">Apri in Studio</a><a id="deepLink" href="../approfondisco/">Apri in Approfondisco</a><button id="copyBtn">Copia la voce</button></div></div></article></section>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="../studio/glossary.js"></script>
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
