@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071721">
+<meta name="description" content="Platone e Aristotele raccontati a fumetti, distinguendo fatti, ricostruzioni plausibili e scene simboliche.">
+<title>A fumetti · Platone & Aristotele</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top"><a class="home" href="../" aria-label="Torna alla copertina">←</a><div class="topcopy"><strong>A fumetti</strong><small>Vite e idee raccontate</small></div><button id="methodBtn" class="tool">Metodo</button></header>
+<main>
+<section class="hero"><div class="wrap"><p class="eyebrow">Percorso 04 · Narrazione</p><h1>La filosofia entra in scena.</h1><p class="lead">Episodi biografici e scene concettuali nello stesso universo visivo della copertina. Ogni tavola dichiara ciò che è <strong>storico</strong>, ciò che è una <strong>ricostruzione plausibile</strong> e ciò che è una <strong>scena simbolica</strong>.</p><div class="legend"><span class="fact">Storico</span><span class="plausible">Plausibile</span><span class="symbolic">Simbolico</span></div></div></section>
+<section class="controls"><div class="wrap controlRow"><div class="filters"><button class="active" data-author="tutti">Tutti</button><button data-author="Platone">Platone</button><button data-author="Aristotele">Aristotele</button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Cerca episodio, luogo o idea"></label></div></section>
+<section class="catalog"><div class="wrap"><div class="catalogHead"><div><p class="eyebrow">Episodi</p><h2>Dalla vita al pensiero</h2></div><span id="count" class="count"></span></div><div id="cards" class="cards"></div></div></section>
+<section class="principles"><div class="wrap principlesGrid"><article><p class="eyebrow">Storia</p><h3>Nessuna invenzione nascosta</h3><p>Lo statuto di ogni scena è sempre visibile.</p></article><article><p class="eyebrow">Filosofia</p><h3>Prima il problema</h3><p>Il concetto nasce dentro un conflitto, un luogo o una scelta.</p></article><article><p class="eyebrow">Design</p><h3>Un’unica identità</h3><p>Blu profondi, oro antico, luce teatrale e tipografia coerente con la home.</p></article></div></section>
+</main>
+<section id="reader" class="reader" aria-hidden="true"><article class="readerPage"><header class="readerTop"><button id="readerClose" aria-label="Chiudi">×</button><div><strong id="episodeCode"></strong><small id="episodeMeta"></small></div><div class="readerNav"><button id="prev" aria-label="Precedente">←</button><button id="next" aria-label="Successivo">→</button></div></header><div class="readerBody"><p class="eyebrow">Tavola narrativa</p><h1 id="episodeTitle"></h1><p id="episodeTagline" class="tagline"></p><div class="episodeGrid"><aside class="episodeAside"><section class="asideBox"><h2>Idee chiave</h2><ul id="coreIdeas"></ul></section><section class="asideBox"><h2>Statuto storico</h2><p id="historicalNote"></p></section><section class="asideBox"><h2>Continua il percorso</h2><div class="links"><a id="studyLink" href="../studio/">Scheda Studio</a><a id="deepLink" href="../approfondisco/">Dossier Approfondisco</a><button id="markRead">Segna come letto</button></div></section></aside><section id="panels" class="panels"></section></div></div></article></section>
+<dialog id="methodDialog" class="methodDialog"><button id="methodClose" aria-label="Chiudi">×</button><p class="eyebrow">Protocollo narrativo</p><h2>Come leggere il fumetto</h2><ol><li><strong>Storico:</strong> episodio o dato attestato.</li><li><strong>Plausibile:</strong> ricostruzione coerente con le fonti, non documentabile nel dettaglio.</li><li><strong>Simbolico:</strong> scena redazionale che rende visibile un’idea.</li><li>I dialoghi sono scrittura narrativa, non citazioni letterali, salvo esplicita indicazione.</li></ol></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./data.js"></script><script src="./app.js"></script>
+</body></html>
