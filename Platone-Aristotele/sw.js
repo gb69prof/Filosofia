@@ -1,4 +1,4 @@
-const CACHE='platone-aristotele-v9';
+const CACHE='platone-aristotele-v10';
 const CORE=['./','./index.html','./home.js','./manifest.webmanifest','./assets/icon.svg','./scopro/','./scopro/index.html','./studio/','./studio/index.html','./studio/style.css','./studio/extra.css','./studio/data-platone.js','./studio/data-aristotele.js','./studio/glossary.js','./studio/comparisons.js','./studio/app.js','./studio/full-lesson.html','./studio/full-style.css','./studio/full-lessons-platone.js','./studio/full-lessons-aristotele.js','./studio/full-app.js','./approfondisco/','./approfondisco/index.html','./approfondisco/style.css','./approfondisco/data-platone.js','./approfondisco/data-aristotele-1.js','./approfondisco/data-aristotele-2.js','./approfondisco/app.js'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));self.skipWaiting()});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))));self.clients.claim()});
