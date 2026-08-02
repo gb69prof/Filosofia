@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071721">
+<meta name="description" content="Approfondisco: laboratorio filologico e interpretativo su Platone e Aristotele.">
+<title>Approfondisco · Platone & Aristotele</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top"><a class="home" href="../" aria-label="Torna alla copertina">←</a><div class="topcopy"><strong>Approfondisco</strong><small>Testi, fonti, interpretazioni</small></div><button id="methodBtn" class="methodBtn">Metodo</button></header>
+<main>
+<section class="hero"><div class="wrap"><p class="eyebrow">Percorso 03 · Ricerca</p><h1>Leggere ciò che il testo dice. E distinguere ciò che gli facciamo dire.</h1><p class="lead">Ogni dossier parte da passi identificati con numerazione canonica. La parafrasi non viene mai presentata come citazione; le interpretazioni sono separate dal dato testuale e accompagnate dal loro grado di certezza.</p><div class="protocol"><span><b>TESTO</b> riferimento Stephanus o Bekker</span><span><b>CONTESTO</b> posizione del passo nell’opera</span><span><b>LETTURA</b> conseguenze sostenute dal testo</span><span><b>DIBATTITO</b> alternative interpretative</span></div></div></section>
+<section class="controls"><div class="wrap controlRow"><div class="filters" role="group" aria-label="Filtra autore"><button class="active" data-author="tutti">Tutti</button><button data-author="Platone">Platone</button><button data-author="Aristotele">Aristotele</button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Cerca opera, concetto o riferimento"></label></div></section>
+<section class="catalog"><div class="wrap"><div class="catalogHead"><div><p class="eyebrow">Dossier verificati</p><h2>Dal problema al passo</h2></div><span id="count" class="count"></span></div><div id="cards" class="cards"></div></div></section>
+<section class="methodSection"><div class="wrap methodGrid"><article><p class="eyebrow">Regola 1</p><h3>Nessuna falsa citazione</h3><p>Le sintesi italiane sono dichiarate come parafrasi redazionali. Il testo primario è identificato con opera e numerazione canonica e si apre dalla fonte indicata.</p></article><article><p class="eyebrow">Regola 2</p><h3>Il contesto precede la tesi</h3><p>Un passo viene letto considerando interlocutore, posizione nell’opera, scopo argomentativo e rapporto con altri testi.</p></article><article><p class="eyebrow">Regola 3</p><h3>Il dissenso resta visibile</h3><p>Quando gli studiosi divergono, la PWA non sceglie silenziosamente una soluzione: mostra le letture concorrenti e il loro statuto.</p></article></div></section>
+</main>
+<section id="reader" class="reader" aria-hidden="true"><article class="readerPage"><header class="readerTop"><button id="readerClose" aria-label="Chiudi">×</button><div><strong id="readerCode"></strong><small id="readerAuthor"></small></div><div class="readerNav"><button id="prev" aria-label="Dossier precedente">←</button><button id="next" aria-label="Dossier successivo">→</button></div></header><div class="readerBody"><p class="eyebrow">Dossier di approfondimento</p><h1 id="readerTitle"></h1><blockquote id="readerQuestion"></blockquote><section><h2>Passi da leggere</h2><p class="disclaimer">Le descrizioni seguenti sono <strong>parafrasi controllate</strong>, non citazioni del testo originale.</p><div id="passages" class="passages"></div></section><section><h2>Contesto indispensabile</h2><div id="context" class="prose"></div></section><section><h2>Lettura testuale</h2><div id="analysis" class="prose"></div></section><section><h2>Interpretazioni e grado di certezza</h2><div id="readings" class="readings"></div></section><section class="warning"><h2>Errori da evitare</h2><ul id="cautions"></ul></section><section><h2>Edizioni e studi di controllo</h2><div id="links" class="links"></div></section><div class="readerActions"><a id="studyBack" href="../studio/">Torna alla scheda Studio</a><button id="markRead">Segna come esaminato</button></div></div></article></section>
+<dialog id="methodDialog" class="methodDialog"><button id="methodClose" aria-label="Chiudi">×</button><p class="eyebrow">Protocollo di rigore</p><h2>Che cosa viene garantito</h2><ol><li><strong>Riferimenti:</strong> Stephanus per Platone, Bekker per Aristotele.</li><li><strong>Testi:</strong> nessuna traduzione redazionale è presentata tra virgolette come testo dell’autore.</li><li><strong>Interpretazioni:</strong> ogni tesi viene distinta dal semplice contenuto del passo.</li><li><strong>Incertezza:</strong> autenticità, cronologia e letture controverse vengono dichiarate.</li><li><strong>Fonti:</strong> edizioni primarie digitali e studi accademici sono collegati separatamente.</li></ol></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./data-platone.js"></script>
+<script src="./data-aristotele-1.js"></script>
+<script src="./data-aristotele-2.js"></script>
+<script src="./app.js"></script>
+</body></html>
