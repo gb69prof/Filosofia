@@ -6,8 +6,30 @@ const cards={
  agora:{eye:'Luogo',title:'L’agorà',text:'Il sapere socratico nasce nella città e nella conversazione pubblica, non in un’aula separata. L’agorà indica il rapporto fra filosofia, opinione, legge e responsabilità civica.',links:[['Confronti · Politica','../../confronti/#politica'],['Laboratorio · Regola ingiusta','../../laboratorio/#legge-ingiusta']]},
  pietra:{eye:'Oggetto simbolico',title:'«So di non sapere»',text:'È una formula tradizionale, non una citazione letterale conservata nei testi. Riassume l’atteggiamento socratico: riconoscere il limite del proprio sapere come inizio della ricerca, non come rinuncia alla verità.',links:[['Dizionario · Aporia','../../dizionario/#aporia'],['Studio · Dialogo','../../studio/#p2']]}
 };
+async function loadEmbeddedArtwork(img){
+ const source=img.getAttribute('src');
+ try{
+  const response=await fetch(`${source}?asset=20`,{cache:'no-store'});
+  if(!response.ok)throw new Error(`HTTP ${response.status}`);
+  const svg=await response.text();
+  const match=svg.match(/data:image\/(jpeg|jpg|webp|png);base64,([^"']+)/i);
+  if(!match)throw new Error('Immagine incorporata non trovata');
+  const mime=match[1].toLowerCase()==='jpg'?'jpeg':match[1].toLowerCase();
+  const binary=atob(match[2]);
+  const bytes=new Uint8Array(binary.length);
+  for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
+  const url=URL.createObjectURL(new Blob([bytes],{type:`image/${mime}`}));
+  img.onload=()=>{img.classList.add('loaded');URL.revokeObjectURL(url)};
+  img.src=url;
+ }catch(error){
+  console.error('Errore caricamento tappa:',error);
+  img.classList.add('asset-error');
+  say('L’immagine della tappa non è stata caricata. Ricarica la pagina una volta.');
+ }
+}
 function say(text){clearTimeout(timer);toast.textContent=text;toast.classList.add('show');timer=setTimeout(()=>toast.classList.remove('show'),2500)}
 function setScale(next){scale=Math.max(.45,Math.min(1.25,next));stage.style.transform=`scale(${scale})`;stage.style.marginBottom=`${1024*(scale-1)}px`;stage.style.marginRight=`${1536*(scale-1)}px`}
 function fit(){setScale(Math.max(.45,Math.min(viewport.clientWidth/1536,(viewport.clientHeight||900)/1024,1)));viewport.scrollTo({left:0,top:0,behavior:'smooth'})}
 function openCard(key){const c=cards[key];if(!c)return;document.querySelector('#cardEye').textContent=c.eye;document.querySelector('#cardTitle').textContent=c.title;document.querySelector('#cardText').textContent=c.text;document.querySelector('#cardLinks').innerHTML=c.links.map(([label,url])=>`<a href="${url}"><span>${label}</span><span>→</span></a>`).join('');dialog.showModal()}
-document.querySelectorAll('[data-card]').forEach(b=>b.addEventListener('click',()=>openCard(b.dataset.card)));document.querySelectorAll('.dialogClose').forEach(b=>b.addEventListener('click',()=>dialog.close()));document.querySelector('#zoomIn').addEventListener('click',()=>setScale(scale+.1));document.querySelector('#zoomOut').addEventListener('click',()=>setScale(scale-.1));document.querySelector('#fitScene').addEventListener('click',fit);document.querySelector('#completeStop').addEventListener('click',()=>{const p=JSON.parse(localStorage.getItem('pa-visit-progress')||'{}');p.p1=true;localStorage.setItem('pa-visit-progress',JSON.stringify(p));say('Tappa completata. Il primo tratto del sentiero è illuminato.');setTimeout(()=>location.href='../',1000)});setTimeout(fit,80);addEventListener('resize',()=>{if(innerWidth<760)fit()});if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../../sw.js',{updateViaCache:'none'}));
+document.querySelectorAll('[data-card]').forEach(b=>b.addEventListener('click',()=>openCard(b.dataset.card)));document.querySelectorAll('.dialogClose').forEach(b=>b.addEventListener('click',()=>dialog.close()));document.querySelector('#zoomIn').addEventListener('click',()=>setScale(scale+.1));document.querySelector('#zoomOut').addEventListener('click',()=>setScale(scale-.1));document.querySelector('#fitScene').addEventListener('click',fit);document.querySelector('#completeStop').addEventListener('click',()=>{const p=JSON.parse(localStorage.getItem('pa-visit-progress')||'{}');p.p1=true;localStorage.setItem('pa-visit-progress',JSON.stringify(p));say('Tappa completata. Il primo tratto del sentiero è illuminato.');setTimeout(()=>location.href='../',1000)});
+const stageImage=stage.querySelector('img');loadEmbeddedArtwork(stageImage).finally(()=>setTimeout(fit,100));addEventListener('resize',()=>{if(innerWidth<760)fit()});if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../../sw.js',{updateViaCache:'none'}));
