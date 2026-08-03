@@ -29,7 +29,7 @@ jobs:
           ]
           for source_name, target_name in pairs:
               source = (assets / source_name).read_text(encoding='utf-8')
-              match = re.search(r'data:image/webp;base64,([^\"\']+)', source)
+              match = re.search(r'data:image/webp;base64,([^\"]+)', source)
               if not match:
                   raise RuntimeError(f'WebP incorporato non trovato in {source_name}')
               data = base64.b64decode(match.group(1))
