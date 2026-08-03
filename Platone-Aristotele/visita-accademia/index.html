@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071721">
+<meta name="description" content="Visita interattiva all'Accademia di Platone e al Liceo di Aristotele.">
+<title>Visita all’Accademia · Platone & Aristotele</title>
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <a href="../" class="back" aria-label="Torna alla copertina">←</a>
+  <div class="topcopy"><strong>Visita all’Accademia</strong><small>Il viaggio nella storia del pensiero</small></div>
+  <div class="topactions">
+    <button id="helpBtn">Come funziona</button>
+    <button id="progressBtn">Le mie tappe</button>
+  </div>
+</header>
+<main>
+<section class="intro">
+  <div>
+    <p class="eyebrow">Mappa generale</p>
+    <h1>Due strade, una ricerca.</h1>
+    <p>Attraversa prima l’Accademia di Platone. Al bivio potrai seguire la prosecuzione platonica oppure entrare nel Liceo di Aristotele.</p>
+  </div>
+  <div class="progressSummary"><span id="summaryValue">0 / 14</span><small>tappe completate</small></div>
+</section>
+<section class="mapShell" aria-label="Mappa interattiva del percorso">
+  <div class="mapTools">
+    <button id="zoomOut" aria-label="Riduci la mappa">−</button>
+    <button id="fitMap">Adatta</button>
+    <button id="zoomIn" aria-label="Ingrandisci la mappa">+</button>
+  </div>
+  <div id="mapViewport" class="mapViewport">
+    <div id="mapStage" class="mapStage">
+      <img src="./assets/mappa-generale.svg" alt="Mappa illustrata dell’Accademia di Platone, del Liceo di Aristotele e delle diramazioni successive.">
+      <a class="hotspot stop enabled plato p1" href="./platone-1/" data-stop="p1" aria-label="Apri la prima tappa: Il Giardino di Socrate"><span>1</span></a>
+      <button class="hotspot stop locked plato p2" data-locked="Il Portico e il dialogo"><span>2</span></button>
+      <button class="hotspot stop locked plato p3" data-locked="La Sala delle Idee"><span>3</span></button>
+      <button class="hotspot stop locked plato p4" data-locked="L’Aula della matematica"><span>4</span></button>
+      <button class="hotspot stop locked plato p5" data-locked="Il Cortile della Repubblica"><span>5</span></button>
+      <button class="hotspot stop locked plato p6" data-locked="La Sala delle Leggi"><span>6</span></button>
+      <button class="hotspot branch neo" data-info="neo" aria-label="Apri la via del Neoplatonismo"></button>
+      <button class="hotspot stop locked aristotle a1" data-locked="Il maestro e il metodo"><span>1</span></button>
+      <button class="hotspot stop locked aristotle a2" data-locked="Logica e dimostrazione"><span>2</span></button>
+      <button class="hotspot stop locked aristotle a3" data-locked="Metafisica e sostanza"><span>3</span></button>
+      <button class="hotspot stop locked aristotle a4" data-locked="Fisica e natura"><span>4</span></button>
+      <button class="hotspot stop locked aristotle a5" data-locked="Biologia e viventi"><span>5</span></button>
+      <button class="hotspot stop locked aristotle a6" data-locked="Etica e vita buona"><span>6</span></button>
+      <button class="hotspot stop locked aristotle a7" data-locked="Politica e città"><span>7</span></button>
+      <button class="hotspot stop locked aristotle a8" data-locked="Poetica e arti"><span>8</span></button>
+      <button class="hotspot branch today" data-info="today" aria-label="Apri la strada E oggi?"></button>
+    </div>
+  </div>
+</section>
+<section class="accessibleRoute">
+  <div class="routeColumn">
+    <h2>Accademia di Platone</h2>
+    <a class="routeCard open" href="./platone-1/"><b>1</b><span><strong>Il Giardino di Socrate</strong><small>Verità, giustizia, virtù e scrittura</small></span></a>
+    <button disabled><b>2</b><span><strong>Il Portico</strong><small>Il dialogo</small></span></button>
+    <button disabled><b>3</b><span><strong>La Sala delle Idee</strong><small>La realtà intelligibile</small></span></button>
+    <button disabled><b>4</b><span><strong>L’Aula della matematica</strong><small>Preparazione alla dialettica</small></span></button>
+    <button disabled><b>5</b><span><strong>Il Cortile</strong><small>La Repubblica</small></span></button>
+    <button disabled><b>6</b><span><strong>La Sala delle Leggi</strong><small>L’ultimo Platone</small></span></button>
+  </div>
+  <div class="routeColumn">
+    <h2>Liceo di Aristotele</h2>
+    <button disabled><b>1</b><span><strong>Il maestro e il metodo</strong></span></button>
+    <button disabled><b>2</b><span><strong>Logica e dimostrazione</strong></span></button>
+    <button disabled><b>3</b><span><strong>Metafisica e sostanza</strong></span></button>
+    <button disabled><b>4</b><span><strong>Fisica e natura</strong></span></button>
+    <button disabled><b>5</b><span><strong>Biologia e viventi</strong></span></button>
+    <button disabled><b>6</b><span><strong>Etica e vita buona</strong></span></button>
+    <button disabled><b>7</b><span><strong>Politica e città</strong></span></button>
+    <button disabled><b>8</b><span><strong>Poetica e arti</strong></span></button>
+  </div>
+</section>
+</main>
+<dialog id="infoDialog" class="dialog"><button class="dialogClose" aria-label="Chiudi">×</button><p id="dialogEye" class="eyebrow"></p><h2 id="dialogTitle"></h2><p id="dialogText"></p><div id="dialogList" class="dialogList"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="./app.js"></script>
+</body>
+</html>
