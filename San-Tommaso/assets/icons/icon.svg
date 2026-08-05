@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Monogramma ST</title>
+  <rect width="512" height="512" rx="96" fill="#06151d"/>
+  <circle cx="256" cy="256" r="205" fill="none" stroke="#c9943d" stroke-width="12"/>
+  <path d="M256 75v362M75 256h362M128 128l256 256M384 128L128 384" stroke="#c9943d" stroke-width="3" opacity=".45"/>
+  <text x="256" y="300" text-anchor="middle" fill="#f1d897" font-family="Georgia,serif" font-size="145" font-weight="700">S.T.</text>
+  <circle cx="256" cy="112" r="9" fill="#e4b65a"/><circle cx="256" cy="400" r="9" fill="#e4b65a"/>
+</svg>

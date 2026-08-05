@@ -1,0 +1,17 @@
+{
+  "name": "San Tommaso d'Aquino — La ragione illuminata dalla fede",
+  "short_name": "San Tommaso",
+  "description": "Percorso filosofico interattivo su Tommaso d'Aquino: ragione, fede, essere, conoscenza ed etica.",
+  "lang": "it-IT",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#06151d",
+  "theme_color": "#06151d",
+  "categories": ["education", "books"],
+  "icons": [
+    {"src": "./assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}
