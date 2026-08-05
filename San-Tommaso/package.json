@@ -1,0 +1,12 @@
+{
+  "name": "san-tommaso-pwa",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/smoke.mjs",
+    "test:dom": "node tests/dom.mjs",
+    "serve": "python3 -m http.server 4173"
+  },
+  "devDependencies": {"happy-dom": "20.0.8"}
+}
