@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071721">
+<meta name="description" content="Tappa interattiva della visita all’Accademia di Platone e al Liceo di Aristotele.">
+<title>Visita all’Accademia · Platone & Aristotele</title>
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../stage.css">
+</head>
+<body>
+<header class="stageTop">
+ <a href="../" class="back" aria-label="Torna alla mappa generale">← <span>Mappa</span></a>
+ <div class="stageTitle"><strong id="stageTitle">Tappa</strong><small id="stageSubtitle"></small></div>
+ <div id="stageProgress" class="stageProgress" aria-label="Avanzamento nel percorso"></div>
+</header>
+<main>
+ <section class="sceneIntro">
+  <div><p id="stageBranch" class="eyebrow"></p><h1 id="stageHeading"></h1><p id="stageLead"></p></div>
+  <button id="exploreHelp" class="quietButton">Come esplorare</button>
+ </section>
+ <section class="sceneShell" aria-label="Scena interattiva">
+  <div class="sceneTools"><button id="zoomOut" aria-label="Riduci la scena">−</button><button id="fitScene">Adatta</button><button id="zoomIn" aria-label="Ingrandisci la scena">+</button></div>
+  <div id="sceneViewport" class="sceneViewport">
+   <div id="sceneStage" class="sceneStage">
+    <img id="stageImage" width="1536" height="1024" decoding="async" fetchpriority="high" alt="">
+    <div id="hotspotLayer" class="hotspotLayer"></div>
+   </div>
+  </div>
+ </section>
+ <section class="mobileCards" aria-labelledby="mobileExploreTitle"><h2 id="mobileExploreTitle">Esplora la tappa</h2><div id="mobileCardList"></div></section>
+ <section class="completion">
+  <div><p class="eyebrow">Porta con te</p><h2 id="takeaway"></h2><p id="completionText">Completa la tappa per illuminare il sentiero e aprire il passaggio successivo.</p></div>
+  <button id="completeStop">Completa la tappa</button>
+ </section>
+ <nav class="stageNav" aria-label="Navigazione tra le tappe"><a id="prevStage" href="#">← Tappa precedente</a><a id="nextStage" href="#">Tappa successiva →</a></nav>
+</main>
+<dialog id="cardDialog" class="cardDialog">
+ <button class="dialogClose" aria-label="Chiudi">×</button><p id="cardEye" class="eyebrow"></p><h2 id="cardTitle"></h2><p id="cardText"></p><div id="cardLinks" class="cardLinks"></div>
+</dialog>
+<dialog id="helpDialog" class="cardDialog">
+ <button class="dialogClose" aria-label="Chiudi">×</button><p class="eyebrow">Come funziona</p><h2>Osserva prima di leggere</h2><p>I punti luminosi indicano personaggi, oggetti e azioni. Toccali per aprire una spiegazione e raggiungere le sezioni della PWA che approfondiscono il problema.</p>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="../stage-data.js?v=30"></script>
+<script src="../stage.js?v=30"></script>
+</body>
+</html>
