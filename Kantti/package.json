@@ -1,0 +1,12 @@
+{
+  "name": "kant-doppio-percorso",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build":"vite build"
+  },
+  "devDependencies": {
+    "vite": "^8.0.13"
+  }
+}

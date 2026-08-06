@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07141c">
+  <meta name="description" content="Una PWA interattiva a due livelli per comprendere e studiare Immanuel Kant.">
+  <title>Immanuel Kant — I limiti della ragione e la libertà</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <header class="topbar">
+    <button class="round-button" id="menuButton" aria-label="Apri l’indice" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Torna alla copertina">
+      <span class="brand-mark">I·K</span>
+      <span><strong>Immanuel Kant</strong><small>I limiti della ragione e la libertà</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="searchButton" aria-label="Cerca nella PWA">⌕</button>
+      <button class="index-button" id="indexButton">▤ <span>Indice</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="./assets/kant-hero.webp" alt="Immanuel Kant davanti a Königsberg sotto un cielo stellato attraversato da geometrie dorate.">
+      <div class="hero-shade"></div>
+      <div class="orbit orbit-one" aria-hidden="true"></div>
+      <div class="orbit orbit-two" aria-hidden="true"></div>
+
+      <button class="hero-hotspot hotspot-space" data-hotspot="space" aria-label="Scopri spazio e tempo"><span>Spazio<br>e tempo</span></button>
+      <button class="hero-hotspot hotspot-reason" data-hotspot="reason" aria-label="Scopri il tribunale della ragione"><span>Ragione</span></button>
+      <button class="hero-hotspot hotspot-sky" data-hotspot="sky" aria-label="Scopri il cielo stellato"><span>Cielo<br>stellato</span></button>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Un viaggio dentro i confini dell’umano</p>
+        <h1 id="heroTitle">Immanuel<br><em>Kant</em></h1>
+        <p class="hero-lead">Come può l’uomo essere parte della natura e, nello stesso tempo, essere libero?</p>
+        <blockquote>«Due cose riempiono l’animo di ammirazione e venerazione sempre nuova e crescente: il cielo stellato sopra di me e la legge morale in me.»<cite>Critica della ragion pratica</cite></blockquote>
+      </div>
+
+      <div class="path-chooser" aria-label="Scegli il percorso">
+        <button class="path-card active" data-mode="amateur">
+          <span class="path-number">01</span>
+          <span class="path-icon">✦</span>
+          <strong>Primo incontro</strong>
+          <small>Per chi vuole capire Kant partendo dalle domande.</small>
+          <span class="path-action">Entra nel pensiero →</span>
+        </button>
+        <button class="path-card" data-mode="student">
+          <span class="path-number">02</span>
+          <span class="path-icon">◈</span>
+          <strong>Studio filosofico</strong>
+          <small>Concetti, argomenti, testi e problemi per veri studenti.</small>
+          <span class="path-action">Apri il laboratorio →</span>
+        </button>
+      </div>
+      <p class="hero-hint">Tocca i punti luminosi dell’immagine: la copertina è una mappa.</p>
+    </section>
+
+    <section class="dashboard section-shell" id="percorso" aria-labelledby="dashboardTitle">
+      <div class="section-heading">
+        <div><p class="eyebrow">Il tuo percorso</p><h2 id="dashboardTitle">Tre domande, un solo sistema</h2></div>
+        <div class="mode-switch" role="group" aria-label="Livello dei contenuti">
+          <button data-mode="amateur" class="active">Primo incontro</button>
+          <button data-mode="student">Studio</button>
+        </div>
+      </div>
+
+      <div class="progress-card">
+        <div><span id="progressLabel">0 di 9 tappe completate</span><strong id="progressPercent">0%</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+        <p id="modeDescription">Spiegazioni chiare, esempi concreti e domande per entrare nel problema.</p>
+      </div>
+
+      <div class="question-triad" aria-label="Le domande fondamentali di Kant">
+        <button data-module="conoscenza"><span>01</span><strong>Che cosa posso conoscere?</strong><small>Ragion pura</small></button>
+        <button data-module="morale"><span>02</span><strong>Che cosa devo fare?</strong><small>Ragion pratica</small></button>
+        <button data-module="giudizio"><span>03</span><strong>Che cosa posso sperare?</strong><small>Giudizio</small></button>
+      </div>
+
+      <div id="moduleGrid" class="module-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="map-section" id="mappe" aria-labelledby="mapsTitle">
+      <div class="section-shell">
+        <div class="section-heading light">
+          <div><p class="eyebrow">Atlante del pensiero</p><h2 id="mapsTitle">Quindici mappe per vedere Kant</h2></div>
+          <p>Ogni nodo apre una spiegazione diversa secondo il livello scelto. Le mappe non riassumono soltanto: mostrano il movimento dell’argomento.</p>
+        </div>
+        <div class="map-layout">
+          <nav id="mapTabs" class="map-tabs" aria-label="Elenco delle mappe"></nav>
+          <article class="concept-map" id="conceptMap" aria-live="polite">
+            <header><p class="eyebrow" id="mapKicker"></p><h3 id="mapTitle"></h3><p id="mapIntro"></p></header>
+            <div class="map-flow" id="mapFlow"></div>
+            <aside class="map-detail" id="mapDetail"><p>Scegli un nodo per aprirne il significato.</p></aside>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section section-shell" id="strumenti" aria-labelledby="toolsTitle">
+      <div class="section-heading">
+        <div><p class="eyebrow">Strumenti di lavoro</p><h2 id="toolsTitle">Non leggere soltanto: metti alla prova la ragione</h2></div>
+      </div>
+      <div class="tool-grid">
+        <button data-tool="glossary"><span>Aa</span><strong>Dizionario filosofico</strong><small>Le parole senza le quali Kant diventa nebbia.</small></button>
+        <button data-tool="comparisons"><span>⇄</span><strong>Confronti</strong><small>Hume, Cartesio, Newton, Rousseau e Hegel.</small></button>
+        <button data-tool="lab"><span>⚖</span><strong>Laboratorio morale</strong><small>Massime, dovere, persone e casi contemporanei.</small></button>
+        <button data-tool="timeline"><span>⌛</span><strong>Linea del tempo</strong><small>La vita, le opere e l’Europa di Kant.</small></button>
+        <button data-tool="library"><span>▥</span><strong>Biblioteca delle opere</strong><small>Orientarsi fra le tre Critiche e gli altri scritti.</small></button>
+        <button data-tool="quiz"><span>✓</span><strong>Verifica</strong><small>Dodici domande con spiegazione della risposta.</small></button>
+      </div>
+    </section>
+
+    <section class="finale" id="sintesi">
+      <div class="section-shell finale-grid">
+        <div>
+          <p class="eyebrow">La soglia kantiana</p>
+          <h2>Finito nel conoscere.<br>Libero nell’agire.</h2>
+        </div>
+        <div>
+          <p>L’uomo non può conoscere l’assoluto come un oggetto. Eppure lo incontra come esigenza della ragione, legge morale e aspirazione alla libertà.</p>
+          <button class="primary-button" data-map="sistema">Apri la mappa delle tre Critiche</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close="drawer"></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="close-button" data-close="drawer" aria-label="Chiudi">×</button>
+      <p class="eyebrow">Indice generale</p>
+      <h2 id="drawerTitle">Attraversare Kant</h2>
+      <nav id="drawerNav"></nav>
+      <div class="drawer-state"><strong id="drawerProgress">0%</strong><span>del percorso completato</span></div>
+    </div>
+  </aside>
+
+  <dialog class="content-dialog" id="contentDialog">
+    <form method="dialog"><button class="close-button" aria-label="Chiudi">×</button></form>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <dialog class="search-dialog" id="searchDialog">
+    <form method="dialog"><button class="close-button" aria-label="Chiudi">×</button></form>
+    <p class="eyebrow">Ricerca trasversale</p>
+    <h2>Cerca un concetto</h2>
+    <label><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Es. noumeno, libertà, sublime…" autocomplete="off"></label>
+    <div id="searchResults" class="search-results"></div>
+  </dialog>
+
+  <button class="notes-fab" id="notesButton" aria-label="Apri il taccuino">✎<span>Taccuino</span></button>
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true">
+    <header><div><p class="eyebrow">Taccuino personale</p><h2>I miei pensieri</h2></div><button class="close-button" id="notesClose" aria-label="Chiudi">×</button></header>
+    <textarea id="notesArea" placeholder="Scrivi collegamenti, dubbi, esempi… Le note restano su questo dispositivo."></textarea>
+    <div><button class="secondary-button" id="exportNotes">Esporta .txt</button><span id="notesStatus" aria-live="polite"></span></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./data.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
