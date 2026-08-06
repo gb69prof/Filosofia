@@ -1,0 +1,15 @@
+{
+  "name":"Immanuel Kant — I limiti della ragione e la libertà",
+  "short_name":"Kant",
+  "description":"PWA interattiva a due livelli per comprendere e studiare il sistema filosofico di Immanuel Kant.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#07141c",
+  "theme_color":"#07141c",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

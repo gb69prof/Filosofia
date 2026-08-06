@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Monogramma IK">
+  <defs><radialGradient id="g"><stop stop-color="#173d4a"/><stop offset="1" stop-color="#06141b"/></radialGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <circle cx="256" cy="256" r="192" fill="none" stroke="#c8943f" stroke-width="8"/>
+  <circle cx="256" cy="256" r="145" fill="none" stroke="#efc875" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M96 256h320M256 96v320" stroke="#efc875" stroke-opacity=".22" stroke-width="3"/>
+  <text x="256" y="288" text-anchor="middle" fill="#efc875" font-family="Georgia,serif" font-size="124" font-weight="600">I·K</text>
+</svg>
