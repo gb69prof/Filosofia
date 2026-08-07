@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#071721"/>
+  <circle cx="256" cy="256" r="188" fill="none" stroke="#d6a64b" stroke-width="18"/>
+  <path d="M148 333c28-41 59-65 93-73-34-14-55-44-55-80 0-52 34-92 82-92 50 0 83 38 83 89 0 35-18 65-49 82 34 10 65 35 86 74" fill="#f3ead5" opacity=".95"/>
+  <path d="M190 193c28-23 52-43 88-47 31-3 55 7 73 29-18-53-54-80-101-80-52 0-88 37-88 92 0 13 2 25 7 36 2-12 9-22 21-30Z" fill="#d6a64b"/>
+  <path d="M229 202c13 16 26 24 39 24 14 0 28-8 43-23M242 242c18 11 36 11 54 0" fill="none" stroke="#071721" stroke-width="10" stroke-linecap="round"/>
+  <text x="256" y="420" fill="#d6a64b" text-anchor="middle" font-family="Georgia,serif" font-size="72" font-weight="700">Σ</text>
+</svg>

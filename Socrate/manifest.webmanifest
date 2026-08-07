@@ -1,0 +1,15 @@
+{
+  "name":"Socrate ad Atene — La filosofia come dialogo",
+  "short_name":"Socrate",
+  "description":"Una PWA interattiva per vivere il metodo socratico, attraversare Atene e distinguere fonti, interpretazioni e problemi aperti.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#071721",
+  "theme_color":"#071721",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
