@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#151927">
+  <meta name="description" content="Indice cronologico e tematico dei percorsi di Filosofia di gbprof.">
+  <title>Filosofia — gbprof e Libera</title>
+  <style>
+    :root{--paper:#f1eadc;--ink:#25232a;--muted:#716d78;--violet:#64528c;--gold:#b8873f;--line:#cbc0ae;--night:#151927}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:
+      radial-gradient(circle at 10% 10%,rgba(100,82,140,.08),transparent 28rem),
+      linear-gradient(rgba(60,53,67,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(60,53,67,.025) 1px,transparent 1px),var(--paper);background-size:auto,28px 28px,28px 28px}
+    a{color:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;z-index:30;background:#fff;padding:.8rem 1rem}
+    .hero{position:relative;min-height:min(720px,92svh);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:
+      radial-gradient(circle at 78% 22%,rgba(150,119,204,.32),transparent 24rem),
+      radial-gradient(circle at 20% 85%,rgba(184,135,63,.22),transparent 25rem),
+      linear-gradient(135deg,#111521,#29233b 58%,#171522);padding:clamp(2rem,7vw,5.5rem) max(1rem,calc((100vw - 1100px)/2))}
+    .hero::before{content:"?";position:absolute;right:-.03em;top:-.34em;color:rgba(255,255,255,.045);font-family:Georgia,serif;font-size:clamp(20rem,55vw,45rem);line-height:1}
+    .hero-content{position:relative;z-index:2;max-width:950px}.eyebrow{margin:0 0 .9rem;color:#e1b96f;font-size:.78rem;font-weight:850;letter-spacing:.2em;text-transform:uppercase}
+    h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(4rem,12vw,9rem);font-weight:500;line-height:.82;letter-spacing:-.065em}
+    .lead{max-width:760px;margin:1.7rem 0 0;color:#d4d1dc;font-size:clamp(1rem,2vw,1.2rem);line-height:1.7}.lead strong{color:#fff;font-weight:650}
+    main{width:min(1100px,calc(100% - 2rem));margin:auto;padding:clamp(3rem,7vw,6rem) 0}.intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:2rem;margin-bottom:4rem;padding-bottom:2.5rem;border-bottom:1px solid var(--line)}
+    .intro h2{margin:0;font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.08}.intro p{margin:0;color:var(--muted);line-height:1.7}
+    .legend{display:flex;flex-wrap:wrap;gap:.8rem 1.5rem;margin-bottom:3rem;color:var(--muted);font-size:.85rem}.key{display:inline-flex;align-items:center;gap:.45rem}.dot{width:.65rem;height:.65rem;border-radius:50%;background:var(--gold)}.dot.soon{background:#b7ac9d}
+    .era{display:grid;grid-template-columns:200px minmax(0,1fr);gap:2.3rem;margin:0 0 4rem}.era-heading{position:sticky;top:1rem;align-self:start}.era-time{margin:0;color:var(--violet);font-size:.75rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.era h2{margin:.4rem 0 0;font-family:Georgia,serif;font-size:1.8rem;font-weight:500;line-height:1.08}.era-question{margin:.8rem 0 0;color:var(--muted);font-family:Georgia,serif;font-style:italic;line-height:1.4}
+    .cards{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}.cards::before{content:"";position:absolute;left:-1.4rem;top:.5rem;bottom:.5rem;width:1px;background:var(--line)}
+    .lesson{position:relative;min-height:165px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #d4c8b8;border-radius:1rem;padding:1.25rem;background:rgba(255,252,246,.72);text-decoration:none;box-shadow:0 8px 24px rgba(48,39,55,.05);transition:transform .2s,border-color .2s,background .2s}
+    .lesson::before{content:"";position:absolute;left:-1.7rem;top:1.45rem;width:.58rem;height:.58rem;border:3px solid var(--paper);border-radius:50%;background:#b7ac9d}.lesson:nth-child(even)::before{display:none}
+    .lesson.available{border-color:#b99152;background:#fffaf0}.lesson.available::before{background:var(--gold)}.lesson:hover,.lesson:focus-visible{transform:translateY(-4px);border-color:#9d8a70;background:#fff}
+    .lesson h3{margin:0;font-family:Georgia,serif;font-size:1.35rem;font-weight:600}.lesson p{margin:.45rem 0 1rem;color:var(--muted);font-size:.9rem;line-height:1.48}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:.7rem}.status{border:1px solid #d2c6b5;border-radius:99px;padding:.36rem .62rem;color:#746c64;background:#ece4d8;font-size:.67rem;font-weight:850;letter-spacing:.07em;text-transform:uppercase}.available .status{border-color:#b8873f;color:#704c20;background:#f2dcb9}.arrow{opacity:0;font-size:1.25rem}.available .arrow{opacity:1}
+    .note{margin-top:4rem;border-top:1px solid var(--line);padding-top:1.5rem;color:var(--muted);font-size:.9rem;line-height:1.65}.toast{position:fixed;left:50%;bottom:1.25rem;z-index:30;max-width:calc(100% - 2rem);transform:translate(-50%,150%);border-radius:.8rem;padding:.85rem 1.1rem;color:#fff;background:#25232a;box-shadow:0 12px 40px rgba(0,0,0,.25);transition:transform .25s}.toast.show{transform:translate(-50%,0)}
+    footer{padding:0 1rem 2rem;text-align:center;color:#817b86;font-size:.8rem}
+    @media(max-width:800px){.intro{grid-template-columns:1fr}.era{grid-template-columns:1fr;gap:1.2rem}.era-heading{position:static}.cards::before{left:.15rem}.cards{margin-left:1.35rem}.lesson::before{left:-1.7rem}.lesson:nth-child(even)::before{display:block}}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.lesson{min-height:145px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#percorsi">Vai ai percorsi</a>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">gbprof · Laboratorio del pensiero</p>
+      <h1>Filosofia</h1>
+      <p class="lead"><strong>Non una raccolta di risposte, ma la storia delle domande</strong> con cui gli esseri umani hanno cercato di comprendere realtà, conoscenza, libertà e convivenza.</p>
+    </div>
+  </header>
+  <main id="percorsi">
+    <section class="intro">
+      <h2>Ogni pensatore sposta il confine di ciò che possiamo pensare.</h2>
+      <p>Il percorso segue il filo cronologico senza trasformarlo in una gabbia: ogni tappa parte da un problema, ricostruisce una risposta e mostra la nuova domanda che quella risposta rende possibile.</p>
+    </section>
+    <div class="legend"><span class="key"><span class="dot"></span> Percorso disponibile</span><span class="key"><span class="dot soon"></span> In preparazione</span></div>
+
+    <section class="era" aria-labelledby="antica">
+      <header class="era-heading"><p class="era-time">VI sec. a.C. – II sec.</p><h2 id="antica">Filosofia antica</h2><p class="era-question">Che cos’è la realtà? Come si vive bene?</p></header>
+      <div class="cards">
+        <a class="lesson" data-lesson href="./Presocratici/"><span><h3>I Presocratici</h3><p>La ricerca dell’arché e la nascita della spiegazione razionale.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Sofisti/"><span><h3>I Sofisti</h3><p>Linguaggio, relativismo e potere della persuasione.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Socrate/"><span><h3>Socrate</h3><p>Conosci te stesso: dialogo, coscienza e cura dell’anima.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Platone-Aristotele/"><span><h3>Platone e Aristotele</h3><p>Due grandi architetture per pensare realtà, conoscenza e politica.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Ellenismo/"><span><h3>Le scuole ellenistiche</h3><p>Epicureismo, stoicismo e scetticismo come arti del vivere.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="era" aria-labelledby="medievale">
+      <header class="era-heading"><p class="era-time">IV – XIV secolo</p><h2 id="medievale">Filosofia medievale</h2><p class="era-question">Fede e ragione possono dire la stessa verità?</p></header>
+      <div class="cards">
+        <a class="lesson" data-lesson href="./Agostino/"><span><h3>Agostino</h3><p>Interiorità, tempo, male e ricerca di Dio.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./San-Tommaso/"><span><h3>Tommaso d’Aquino</h3><p>La sintesi fra cristianesimo e Aristotele.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="era" aria-labelledby="moderna">
+      <header class="era-heading"><p class="era-time">XV – XVIII secolo</p><h2 id="moderna">Filosofia moderna</h2><p class="era-question">Da dove viene la certezza?</p></header>
+      <div class="cards">
+        <a class="lesson" data-lesson href="./Rinascimento/"><span><h3>Umanesimo e Rinascimento</h3><p>Nuova immagine dell’uomo, natura e libertà.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Rivoluzione-scientifica/"><span><h3>La rivoluzione scientifica</h3><p>Metodo, matematica e nuova concezione dell’universo.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Cartesio/"><span><h3>Cartesio e il razionalismo</h3><p>Il dubbio, il cogito e la fondazione del sapere.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Empirismo/"><span><h3>Empirismo: Locke e Hume</h3><p>Esperienza, identità e critica della causalità.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Kant/"><span><h3>Immanuel Kant</h3><p>I limiti della ragione, l’autonomia morale e l’Illuminismo.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+      </div>
+    </section>
+
+    <section class="era" aria-labelledby="contemporanea">
+      <header class="era-heading"><p class="era-time">XIX – XX secolo</p><h2 id="contemporanea">Filosofia contemporanea</h2><p class="era-question">Che cosa resta del soggetto moderno?</p></header>
+      <div class="cards">
+        <a class="lesson" data-lesson href="./Hegel/"><span><h3>Hegel e l’idealismo</h3><p>Dialettica, storia e razionalità del reale.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Marx/"><span><h3>Karl Marx</h3><p>Lavoro, alienazione, conflitto e trasformazione sociale.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Nietzsche/"><span><h3>Friedrich Nietzsche</h3><p>Genealogia, nichilismo e trasvalutazione dei valori.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Freud/"><span><h3>Sigmund Freud</h3><p>L’inconscio e la crisi dell’io padrone di sé.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+        <a class="lesson" data-lesson href="./Esistenzialismo/"><span><h3>L’esistenzialismo</h3><p>Libertà, angoscia, scelta e responsabilità.</p></span><span class="foot"><span class="status">In preparazione</span><span class="arrow">→</span></span></a>
+      </div>
+    </section>
+    <p class="note">L’indice controlla automaticamente i percorsi: le quattro PWA già presenti sono accessibili subito; ogni nuovo filosofo si attiverà quando la relativa cartella conterrà un <strong>index.html</strong>.</p>
+  </main>
+  <footer>Filosofia · gbprof e Libera</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite">Questo percorso è ancora in preparazione.</div>
+  <script>
+    (() => {
+      const toast = document.getElementById('toast');
+      let timer;
+      const notify = () => {
+        toast.classList.add('show');
+        clearTimeout(timer);
+        timer = setTimeout(() => toast.classList.remove('show'), 2400);
+      };
+      document.querySelectorAll('[data-lesson]').forEach(async card => {
+        const target = new URL('index.html', card.href);
+        try {
+          const response = await fetch(target, { method: 'HEAD', cache: 'no-store' });
+          if (response.ok) {
+            card.classList.add('available');
+            card.querySelector('.status').textContent = 'Disponibile';
+            return;
+          }
+        } catch (_) {}
+        card.setAttribute('aria-disabled', 'true');
+        card.addEventListener('click', event => { event.preventDefault(); notify(); });
+      });
+    })();
+  </script>
+</body>
+</html>
