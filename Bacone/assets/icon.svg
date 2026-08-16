@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Icona della PWA su Francesco Bacone</title>
+  <defs><radialGradient id="g" cx="30%" cy="20%"><stop stop-color="#174a4d"/><stop offset="1" stop-color="#061316"/></radialGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <circle cx="256" cy="256" r="188" fill="none" stroke="#d3a34d" stroke-width="8"/>
+  <path d="M172 310c56-20 112-20 168 0M180 204c50 18 102 18 152 0M256 164v184" fill="none" stroke="#f2d78c" stroke-width="13" stroke-linecap="round"/>
+  <path d="M220 238c-38-46-79-19-67 22 9 30 41 37 67 13M292 238c38-46 79-19 67 22-9 30-41 37-67 13" fill="#d3a34d" opacity=".9"/>
+  <ellipse cx="256" cy="254" rx="38" ry="64" fill="#f2d78c"/>
+  <path d="M226 235h60M222 258h68M228 281h56" stroke="#071a1d" stroke-width="12"/>
+</svg>

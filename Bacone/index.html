@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a1d">
+  <meta name="description" content="Una PWA interattiva su Francesco Bacone: idoli, induzione, sapere operativo e responsabilità della conoscenza.">
+  <title>Bacone — Liberare la mente, interrogare la natura</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <header class="topbar">
+    <button class="round-button" id="menuButton" aria-label="Apri l’indice" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Torna alla copertina">
+      <span class="brand-mark">F·B</span>
+      <span><strong>Francesco Bacone</strong><small>Liberare la mente, interrogare la natura</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="fontButton" aria-label="Aumenta la dimensione del testo">A</button>
+      <button class="icon-button" id="notesButton" aria-label="Apri il taccuino">✎</button>
+      <button class="icon-button" id="searchButton" aria-label="Cerca nella PWA">⌕</button>
+      <button class="index-button" id="indexButton">▤ <span>Indice</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="./assets/cover-bacone.webp" alt="Francesco Bacone fra una biblioteca rinascimentale e un laboratorio aperto alla natura.">
+      <div class="hero-shade"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <button class="hero-hotspot hotspot-book" data-hotspot="book" aria-label="Scopri il vecchio sapere"><span>Autorità</span></button>
+      <button class="hero-hotspot hotspot-bee" data-hotspot="bee" aria-label="Scopri la metafora dell’ape"><span>L’ape</span></button>
+      <button class="hero-hotspot hotspot-light" data-hotspot="light" aria-label="Scopri il nuovo metodo"><span>Esperienza</span></button>
+      <div class="hero-copy">
+        <p class="eyebrow">Filosofia moderna · Il laboratorio del sapere</p>
+        <h1 id="heroTitle">Liberare la mente.<br><em>Interrogare la natura.</em></h1>
+        <p class="hero-lead">La conoscenza comincia quando smettiamo di costringere il mondo a confermare ciò che pensiamo.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#scopro">Comincia da un errore</a>
+          <a class="secondary-button" href="#studio">Entra nel percorso</a>
+        </div>
+      </div>
+      <p class="hero-hint">Tocca i tre segni nella scena</p>
+    </section>
+
+    <section class="portal section-dark" aria-labelledby="portalTitle">
+      <div class="wrap">
+        <p class="eyebrow">Quattro ingressi</p>
+        <h2 id="portalTitle">Non leggere soltanto Bacone: metti in moto il suo metodo.</h2>
+        <div class="portal-grid">
+          <a href="#scopro" class="portal-card" data-num="01"><span>Esperienza</span><h3>Scopro</h3><p>Una notizia ambigua, quattro decisioni e una mente che crede di essere neutrale.</p></a>
+          <a href="#studio" class="portal-card" data-num="02"><span>Percorso</span><h3>Studio</h3><p>Dodici tappe a due livelli, dalle fratture della modernità alla responsabilità del sapere.</p></a>
+          <a href="#fonti" class="portal-card" data-num="03"><span>Testi</span><h3>Approfondisco</h3><p>Fonti primarie, interpretazioni accademiche e questioni aperte restano distinguibili.</p></a>
+          <a href="#fumetti" class="portal-card" data-num="04"><span>Biografia visuale</span><h3>A fumetti</h3><p>Otto scene dalla formazione alla caduta politica, fino alla Nuova Atlantide.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paper" id="scopro" aria-labelledby="scoproTitle">
+      <div class="wrap narrow">
+        <p class="eyebrow dark">Scopro · Prima vivi il problema</p>
+        <h2 id="scoproTitle">La notizia che volevi fosse vera</h2>
+        <p class="section-lead">Ti arriva un messaggio sorprendente. Non devi indovinare l’opzione “buona”: devi osservare come lavora la tua mente.</p>
+        <div class="discovery" id="discovery" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section studio" id="studio" aria-labelledby="studioTitle">
+      <div class="wrap">
+        <div class="section-heading split">
+          <div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla mente ingombra alla conoscenza operativa</h2></div>
+          <div class="mode-switch" role="group" aria-label="Livello di lettura">
+            <button data-mode="amateur" class="active">Primo incontro</button>
+            <button data-mode="student">Studio filosofico</button>
+          </div>
+        </div>
+        <p id="modeDescription" class="mode-description">Spiegazioni chiare, esempi concreti e domande per entrare nel problema.</p>
+        <div class="progress-card">
+          <div><strong id="progressLabel">0 di 12 tappe completate</strong><span id="progressPercent">0%</span></div>
+          <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+          <p>Il progresso resta sul dispositivo. Non misura il tuo valore: serve solo a ritrovare il filo.</p>
+        </div>
+        <div class="module-grid" id="moduleGrid"></div>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="laboratorio" aria-labelledby="labTitle">
+      <div class="wrap">
+        <p class="eyebrow">Laboratorio · Interpretare la natura</p>
+        <h2 id="labTitle">Il calore davanti al tribunale dell’esperienza</h2>
+        <p class="section-lead light">Classifica i casi, escludi le spiegazioni incompatibili e formula una prima vendemmia. L’esperimento non conferma un’intuizione: la mette in pericolo.</p>
+        <div class="lab-tabs" role="tablist" aria-label="Laboratori">
+          <button class="active" data-lab-tab="tables" role="tab" aria-selected="true">Le tre tavole</button>
+          <button data-lab-tab="idols" role="tab" aria-selected="false">Gli idoli oggi</button>
+        </div>
+        <div id="tablesLab" class="lab-panel"></div>
+        <div id="idolsLab" class="lab-panel" hidden></div>
+      </div>
+    </section>
+
+    <section class="section sources" id="fonti" aria-labelledby="sourcesTitle">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow dark">Approfondisco · Testi e interpretazioni</p><h2 id="sourcesTitle">La voce di Bacone, il lavoro degli studiosi</h2><p>Ogni scheda dichiara il proprio livello: fonte primaria, ricostruzione o problema storiografico.</p></div>
+        <div class="source-grid" id="sourceGrid"></div>
+      </div>
+    </section>
+
+    <section class="section comics" id="fumetti" aria-labelledby="comicsTitle">
+      <div class="wrap">
+        <p class="eyebrow">A fumetti · Otto scene</p>
+        <h2 id="comicsTitle">Una vita tra corte, caduta e rifondazione del sapere</h2>
+        <p class="section-lead light">La biografia non spiega automaticamente la filosofia, ma mostra il mondo nel quale una grande ambizione intellettuale prese forma.</p>
+        <div class="comic-strip" id="comicStrip"></div>
+      </div>
+    </section>
+
+    <section class="section maps-section" id="mappe" aria-labelledby="mapsTitle">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Mappe concettuali</p><h2 id="mapsTitle">Segui il movimento, non una lista di definizioni</h2></div>
+        <div class="map-layout">
+          <div class="map-tabs" id="mapTabs"></div>
+          <div class="concept-map" id="conceptMap"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tools-section" id="strumenti" aria-labelledby="toolsTitle">
+      <div class="wrap">
+        <p class="eyebrow dark">Strumenti</p>
+        <h2 id="toolsTitle">Ritrova, confronta, verifica</h2>
+        <div class="tool-grid">
+          <button data-tool="glossary"><span>Ab</span><strong>Dizionario</strong><small>Le parole che rendono visibili le distinzioni.</small></button>
+          <button data-tool="timeline"><span>↝</span><strong>Linea del tempo</strong><small>Vita, opere e contesto europeo.</small></button>
+          <button data-tool="library"><span>▤</span><strong>Biblioteca</strong><small>Orientarsi nelle opere senza confonderle.</small></button>
+          <button data-tool="comparisons"><span>⇄</span><strong>Confronti</strong><small>Aristotele, Scolastica, Galileo e Cartesio.</small></button>
+          <button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Domande ragionate e recupero mirato.</small></button>
+          <button data-tool="sources"><span>↗</span><strong>Fonti accademiche</strong><small>Solo università e archivi universitari.</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap narrow">
+        <p class="eyebrow">La domanda che resta</p>
+        <blockquote>Se conoscere significa poter trasformare il mondo, chi deve decidere in quale mondo trasformarlo?</blockquote>
+        <p>Bacone consegna alla modernità una promessa e un rischio. Il metodo disciplina la mente e moltiplica le possibilità dell’agire; proprio per questo, la potenza del sapere non può sottrarsi alla responsabilità.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p>
+    <p><a href="../">Torna all’indice di Filosofia</a> · <button id="installButton" class="text-button">Installa la PWA</button></p>
+  </footer>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="close-button" id="drawerClose" aria-label="Chiudi l’indice">×</button>
+      <p class="eyebrow">Indice generale</p><h2>Attraversa Bacone</h2>
+      <nav id="drawerNav"></nav>
+      <div class="drawer-progress"><span>Progresso</span><strong id="drawerProgress">0%</strong></div>
+    </div>
+  </aside>
+
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true">
+    <header><div><p class="eyebrow">Taccuino</p><h2>Le tue osservazioni</h2></div><button id="notesClose" aria-label="Chiudi il taccuino">×</button></header>
+    <textarea id="notesArea" aria-label="Appunti personali" placeholder="Scrivi qui domande, collegamenti, obiezioni…"></textarea>
+    <div class="notes-actions"><span id="notesStatus" aria-live="polite"></span><button id="exportNotes">Esporta .txt</button></div>
+  </aside>
+
+  <dialog id="contentDialog" class="content-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <dialog id="searchDialog" class="search-dialog">
+    <button class="dialog-close" id="searchClose" aria-label="Chiudi ricerca">×</button>
+    <p class="eyebrow dark">Ricerca interna</p><h2>Cerca un concetto</h2>
+    <label class="search-box"><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Per esempio: idoli, forma, esperienza…" autocomplete="off"></label>
+    <div id="searchResults" class="search-results" aria-live="polite"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

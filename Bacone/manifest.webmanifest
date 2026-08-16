@@ -1,0 +1,15 @@
+{
+  "name":"Bacone — Liberare la mente, interrogare la natura",
+  "short_name":"Bacone",
+  "description":"PWA interattiva su idoli, induzione, sapere operativo e responsabilità della conoscenza.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#071a1d",
+  "theme_color":"#071a1d",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
