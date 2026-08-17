@@ -1,0 +1,15 @@
+{
+  "name":"Cartesio — Il punto fermo nel dubbio",
+  "short_name":"Cartesio",
+  "description":"PWA interattiva su metodo, dubbio, cogito, dualismo e problemi della modernità.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#0b111c",
+  "theme_color":"#0b111c",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
