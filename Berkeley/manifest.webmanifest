@@ -1,0 +1,15 @@
+{
+  "name":"George Berkeley — La realtà nello sguardo",
+  "short_name":"Berkeley",
+  "description":"PWA interattiva su percezione, immaterialismo, spirito e continuità del reale.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#071b20",
+  "theme_color":"#071b20",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
