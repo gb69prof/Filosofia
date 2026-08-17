@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101923">
+  <meta name="description" content="Friedrich Nietzsche: una PWA interattiva su morte di Dio, genealogia, nichilismo, volontà di potenza, oltreuomo ed eterno ritorno.">
+  <title>Nietzsche — Dopo la morte di Dio</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <header class="topbar">
+    <button class="round-button" id="menuButton" aria-label="Apri l’indice" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Torna alla copertina">
+      <span class="brand-mark">F·N</span>
+      <span><strong>Friedrich Nietzsche</strong><small>Dopo la morte di Dio</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="fontButton" aria-label="Aumenta la dimensione del testo">A</button>
+      <button class="icon-button" id="notesButton" aria-label="Apri il taccuino">✎</button>
+      <button class="icon-button" id="searchButton" aria-label="Cerca nella PWA">⌕</button>
+      <button class="index-button" id="indexButton">▤ <span>Indice</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="./assets/cover-nietzsche.webp" alt="Un pensatore solitario osserva un ponte di corde sospeso sopra un abisso nell’alta valle di Sils-Maria; nel cielo, un anello di nubi suggerisce il ritorno dell’uguale.">
+      <div class="hero-shade"></div><div class="hero-grain" aria-hidden="true"></div>
+      <button class="hero-hotspot hotspot-abyss" data-hotspot="abyss" aria-label="Scopri l’abisso del nichilismo"><span>Abisso</span></button>
+      <button class="hero-hotspot hotspot-bridge" data-hotspot="bridge" aria-label="Scopri il ponte dell’oltrepassamento"><span>Ponte</span></button>
+      <button class="hero-hotspot hotspot-circle" data-hotspot="circle" aria-label="Scopri il cerchio dell’eterno ritorno"><span>Cerchio</span></button>
+      <div class="hero-copy">
+        <p class="eyebrow">Filosofia contemporanea · Crisi e creazione</p>
+        <h1 id="heroTitle">Dopo la morte di Dio,<br><em>chi crea il senso?</em></h1>
+        <p class="hero-lead">Se i valori non sono più garantiti dall’alto, siamo condannati al vuoto oppure diventiamo responsabili di ciò che sapremo affermare?</p>
+        <div class="hero-actions"><a class="primary-button" href="#scopro">Entra nella crisi</a><a class="secondary-button" href="#laboratorio">Metti alla prova i valori</a></div>
+      </div>
+      <p class="hero-hint">Tocca i tre punti luminosi</p>
+    </section>
+
+    <section class="portal section-dark" aria-labelledby="portalTitle"><div class="wrap">
+      <p class="eyebrow">Quattro ingressi</p>
+      <h2 id="portalTitle">Non collezionare formule: attraversa la crisi, interroga l’origine dei valori e misura la forza di un sì alla vita.</h2>
+      <div class="portal-grid">
+        <a href="#scopro" class="portal-card" data-num="01"><span>Esperimento</span><h3>Scopro</h3><p>Vivi il crollo di una certezza e osserva che cosa resta quando il fondamento scompare.</p></a>
+        <a href="#studio" class="portal-card" data-num="02"><span>Percorso</span><h3>Studio</h3><p>Dodici tappe a due livelli, dalla tragedia greca alla controversa eredità novecentesca.</p></a>
+        <a href="#fonti" class="portal-card" data-num="03"><span>Testi</span><h3>Approfondisco</h3><p>Opere pubblicate, frammenti postumi e interpretazioni accademiche restano distinti.</p></a>
+        <a href="#fumetti" class="portal-card" data-num="04"><span>Biografia visuale</span><h3>A fumetti</h3><p>Otto scene documentate: formazione, Wagner, Sils-Maria, Torino e il destino dell’archivio.</p></a>
+      </div>
+    </div></section>
+
+    <section class="section paper" id="scopro" aria-labelledby="scoproTitle"><div class="wrap narrow">
+      <p class="eyebrow dark">Scopro · Prima vivi il problema</p>
+      <h2 id="scoproTitle">Che cosa accade quando una certezza continua a governarci dopo che non le crediamo più?</h2>
+      <p class="section-lead">Le scelte non assegnano un voto. Rendono visibile il passaggio dalla sicurezza ereditata al disorientamento, fino alla responsabilità di valutare senza un tribunale fuori dalla vita.</p>
+      <div class="discovery" id="discovery" aria-live="polite"></div>
+    </div></section>
+
+    <section class="section studio" id="studio" aria-labelledby="studioTitle"><div class="wrap">
+      <div class="section-heading split"><div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla crisi dei fondamenti all’esperimento di una vita affermata</h2></div>
+        <div class="mode-switch" role="group" aria-label="Livello di lettura"><button data-mode="amateur" class="active">Primo incontro</button><button data-mode="student">Studio filosofico</button></div>
+      </div>
+      <p id="modeDescription" class="mode-description">Spiegazioni chiare, esempi concreti e domande per entrare nel problema.</p>
+      <div class="progress-card"><div><strong id="progressLabel">0 di 12 tappe completate</strong><span id="progressPercent">0%</span></div><div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div><p>Il progresso resta sul dispositivo. Serve a ritrovare il filo, non a misurare il tuo valore.</p></div>
+      <div class="module-grid" id="moduleGrid"></div>
+    </div></section>
+
+    <section class="section lab-section" id="laboratorio" aria-labelledby="labTitle"><div class="wrap">
+      <p class="eyebrow">Laboratorio · Genealogia e affermazione</p>
+      <h2 id="labTitle">Metti alla prova il metodo, non una frase celebre</h2>
+      <p class="section-lead light">Nel primo laboratorio ricostruisci la storia di un valore; nel secondo esplori l’eterno ritorno come domanda sulla vita intera, senza ridurlo a un test di personalità.</p>
+      <div class="lab-tabs" role="tablist" aria-label="Laboratori nietzschiani">
+        <button class="active" data-lab-tab="genealogy" role="tab" aria-selected="true">Officina genealogica</button>
+        <button data-lab-tab="recurrence" role="tab" aria-selected="false">La prova del ritorno</button>
+      </div>
+      <div id="genealogyLab" class="lab-panel" aria-live="polite"></div>
+      <div id="recurrenceLab" class="lab-panel" aria-live="polite" hidden></div>
+    </div></section>
+
+    <section class="section sources" id="fonti" aria-labelledby="sourcesTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow dark">Approfondisco · Testi e interpretazioni</p><h2 id="sourcesTitle">La voce di Nietzsche, il lavoro degli studiosi</h2><p>Ogni scheda indica se stai leggendo un’opera pubblicata, un frammento postumo, una ricostruzione storica o una controversia interpretativa.</p></div>
+      <div class="source-grid" id="sourceGrid"></div>
+    </div></section>
+
+    <section class="section comics" id="fumetti" aria-labelledby="comicsTitle"><div class="wrap">
+      <p class="eyebrow">A fumetti · Otto scene</p><h2 id="comicsTitle">Una vita di libri, fratture e geografie</h2>
+      <p class="section-lead light">La biografia orienta, ma non dimostra la filosofia. Le scene distinguono i fatti attestati dalle leggende, compreso il celebre cavallo di Torino.</p>
+      <div class="comic-strip" id="comicStrip"></div>
+    </div></section>
+
+    <section class="section maps-section" id="mappe" aria-labelledby="mapsTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">Mappe concettuali</p><h2 id="mapsTitle">Segui passaggi, ritorni e tensioni</h2></div>
+      <div class="map-layout"><div class="map-tabs" id="mapTabs" role="tablist" aria-label="Mappe disponibili"></div><div class="concept-map" id="conceptMap" aria-live="polite"></div></div>
+    </div></section>
+
+    <section class="section tools-section" id="strumenti" aria-labelledby="toolsTitle"><div class="wrap">
+      <p class="eyebrow dark">Strumenti</p><h2 id="toolsTitle">Ritrova, confronta, verifica</h2>
+      <div class="tool-grid">
+        <button data-tool="glossary"><span>Ab</span><strong>Dizionario</strong><small>Trenta parole per non ridurre Nietzsche a slogan.</small></button>
+        <button data-tool="timeline"><span>↝</span><strong>Linea del tempo</strong><small>Vita, opere e contesto dal 1844 al 1900.</small></button>
+        <button data-tool="library"><span>▤</span><strong>Biblioteca</strong><small>Dalle opere filologiche agli scritti del 1888.</small></button>
+        <button data-tool="comparisons"><span>⇄</span><strong>Confronti</strong><small>Schopenhauer, Wagner, Platone, Darwin e il Novecento.</small></button>
+        <button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Risposte spiegate, stato salvato e recupero mirato.</small></button>
+        <button data-tool="academics"><span>↗</span><strong>Fonti accademiche</strong><small>Solo università, enciclopedie universitarie e university press.</small></button>
+      </div>
+    </div></section>
+
+    <section class="closing"><div class="wrap narrow"><p class="eyebrow">La domanda che resta</p><blockquote>Se non esiste un tribunale fuori dalla vita, come distinguiamo la creazione di valori dall’arbitrio del più forte?</blockquote><p>Nietzsche non consegna un nuovo catechismo. Costringe a vedere che anche i valori più solenni hanno una storia e un corpo, ma non per questo autorizza ogni scelta. La prova diventa più esigente: domandare quale forma di vita un valore renda possibile, quale prezzo imponga e se potremmo volerla ancora, senza nasconderne dolore e conseguenze.</p></div></section>
+  </main>
+
+  <footer class="footer"><p>Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p><p><a href="../">← Torna all’indice di Filosofia</a> · <button data-tool="academics" class="text-button">Fonti universitarie</button> · <button id="installButton" class="text-button">Installa la PWA</button></p></footer>
+
+  <aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-backdrop" data-close="drawer"></div><div class="drawer-panel"><button class="close-button" id="drawerClose" aria-label="Chiudi l’indice">×</button><p class="eyebrow">Indice generale</p><h2>Attraversa Nietzsche</h2><nav id="drawerNav"></nav><div class="drawer-progress"><span>Progresso</span><strong id="drawerProgress">0%</strong></div></div></aside>
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true"><header><div><p class="eyebrow">Taccuino</p><h2>Le tue osservazioni</h2></div><button id="notesClose" aria-label="Chiudi il taccuino">×</button></header><textarea id="notesArea" aria-label="Appunti personali" placeholder="Scrivi qui domande, collegamenti, obiezioni…"></textarea><div class="notes-actions"><span id="notesStatus" aria-live="polite"></span><button id="exportNotes">Esporta .txt</button></div></aside>
+  <dialog id="contentDialog" class="content-dialog"><button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="searchDialog" class="search-dialog"><button class="dialog-close" id="searchClose" aria-label="Chiudi ricerca">×</button><p class="eyebrow dark">Ricerca interna</p><h2>Cerca un concetto</h2><label class="search-box"><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Per esempio: nichilismo, risentimento, ritorno…" autocomplete="off"></label><div id="searchResults" class="search-results" aria-live="polite"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./data.js"></script><script src="./app.js"></script>
+</body>
+</html>

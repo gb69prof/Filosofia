@@ -1,0 +1,12 @@
+{
+  "name": "Nietzsche — Dopo la morte di Dio",
+  "short_name": "Nietzsche",
+  "description": "Percorso interattivo su morte di Dio, genealogia, nichilismo, volontà di potenza, oltreuomo ed eterno ritorno.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101923",
+  "theme_color": "#101923",
+  "lang": "it",
+  "icons": [{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
