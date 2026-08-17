@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Hobbes, il patto e il Leviatano</title>
+  <desc id="desc">Una moltitudine di persone forma un unico corpo politico coronato.</desc>
+  <rect width="512" height="512" rx="112" fill="#101216"/>
+  <path d="M256 84 310 116 290 174H222l-20-58z" fill="#e5b96b"/>
+  <path d="M170 196c25-31 55-47 86-47s61 16 86 47l39 168c-43 42-85 63-125 63s-82-21-125-63z" fill="#262d34" stroke="#e5b96b" stroke-width="12"/>
+  <g fill="#e8d9bd">
+    <circle cx="205" cy="231" r="15"/><circle cx="256" cy="218" r="15"/><circle cx="307" cy="231" r="15"/>
+    <circle cx="184" cy="278" r="14"/><circle cx="230" cy="270" r="14"/><circle cx="282" cy="270" r="14"/><circle cx="328" cy="278" r="14"/>
+    <circle cx="205" cy="322" r="13"/><circle cx="256" cy="315" r="13"/><circle cx="307" cy="322" r="13"/>
+    <circle cx="230" cy="360" r="12"/><circle cx="282" cy="360" r="12"/>
+  </g>
+  <path d="M256 191v205M223 174h66" stroke="#a76b32" stroke-width="10" stroke-linecap="round"/>
+</svg>

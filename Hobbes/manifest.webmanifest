@@ -1,0 +1,15 @@
+{
+  "name":"Hobbes — La paura costruisce lo Stato",
+  "short_name":"Hobbes",
+  "description":"PWA interattiva su paura, stato di natura, contratto, sovranità e libertà.",
+  "lang":"it-IT",
+  "id":"./",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#101216",
+  "theme_color":"#101216",
+  "categories":["education","books"],
+  "icons":[{"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

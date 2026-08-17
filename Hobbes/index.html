@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b111c">
+  <meta name="description" content="Thomas Hobbes: una PWA interattiva su paura, stato di natura, contratto, sovranità e libertà.">
+  <title>Hobbes — La paura costruisce lo Stato</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <header class="topbar">
+    <button class="round-button" id="menuButton" aria-label="Apri l’indice" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Torna alla copertina">
+      <span class="brand-mark">T·H</span>
+      <span><strong>Thomas Hobbes</strong><small>La paura, il patto, lo Stato</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="fontButton" aria-label="Aumenta la dimensione del testo">A</button>
+      <button class="icon-button" id="notesButton" aria-label="Apri il taccuino">✎</button>
+      <button class="icon-button" id="searchButton" aria-label="Cerca nella PWA">⌕</button>
+      <button class="index-button" id="indexButton">▤ <span>Indice</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="./assets/cover-hobbes.webp" alt="Thomas Hobbes in uno studio seicentesco, accanto a una moltitudine che prende la forma di un grande corpo politico: la paura e il patto danno origine al Leviatano.">
+      <div class="hero-shade"></div><div class="hero-grain" aria-hidden="true"></div>
+      <button class="hero-hotspot hotspot-fear" data-hotspot="fear" aria-label="Scopri la paura"><span>Paura</span></button>
+      <button class="hero-hotspot hotspot-nature" data-hotspot="nature" aria-label="Scopri lo stato di natura"><span>Stato di natura</span></button>
+      <button class="hero-hotspot hotspot-leviathan" data-hotspot="leviathan" aria-label="Scopri il Leviatano"><span>Leviatano</span></button>
+      <div class="hero-copy">
+        <p class="eyebrow">Filosofia politica moderna · Sicurezza e potere</p>
+        <h1 id="heroTitle">La paura costruisce<br><em>lo Stato.</em></h1>
+        <p class="hero-lead">Quanta libertà possiamo consegnare allo Stato perché ci protegga, prima che la protezione diventi una nuova forma di paura?</p>
+        <div class="hero-actions"><a class="primary-button" href="#scopro">Entra nello stato di natura</a><a class="secondary-button" href="#laboratorio">Ricostruisci il patto</a></div>
+      </div>
+      <p class="hero-hint">Tocca i tre punti luminosi</p>
+    </section>
+    <section class="portal section-dark" aria-labelledby="portalTitle"><div class="wrap">
+      <p class="eyebrow">Quattro ingressi</p>
+      <h2 id="portalTitle">Non imparare una formula: ricostruisci perché uomini uguali e vulnerabili autorizzano un potere comune.</h2>
+      <div class="portal-grid">
+        <a href="#scopro" class="portal-card" data-num="01"><span>Esperimento mentale</span><h3>Scopro</h3><p>Senza un potere comune, fiducia, promesse e cooperazione diventano fragili.</p></a>
+        <a href="#studio" class="portal-card" data-num="02"><span>Percorso</span><h3>Studio</h3><p>Dodici tappe a due livelli, dalla guerra civile alla libertà dei sudditi.</p></a>
+        <a href="#fonti" class="portal-card" data-num="03"><span>Testi</span><h3>Approfondisco</h3><p>Fonti primarie, ricostruzioni accademiche e questioni controverse restano distinte.</p></a>
+        <a href="#fumetti" class="portal-card" data-num="04"><span>Biografia visuale</span><h3>A fumetti</h3><p>Otto scene documentate: l’Armada, la guerra civile, Parigi, il Leviatano e la Restaurazione.</p></a>
+      </div>
+    </div></section>
+    <section class="section paper" id="scopro" aria-labelledby="scoproTitle"><div class="wrap narrow">
+      <p class="eyebrow dark">Scopro · Prima vivi il problema</p>
+      <h2 id="scoproTitle">Che cosa accade quando nessuno può garantire la pace?</h2>
+      <p class="section-lead">Le scelte non assegnano un voto. Rendono visibile come vulnerabilità, incertezza e diffidenza trasformino anche persone ragionevoli in potenziali avversari.</p>
+      <div class="discovery" id="discovery" aria-live="polite"></div>
+    </div></section>
+    <section class="section studio" id="studio" aria-labelledby="studioTitle"><div class="wrap">
+      <div class="section-heading split"><div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla paura reciproca alla costruzione del commonwealth</h2></div>
+        <div class="mode-switch" role="group" aria-label="Livello di lettura"><button data-mode="amateur" class="active">Primo incontro</button><button data-mode="student">Studio filosofico</button></div>
+      </div>
+      <p id="modeDescription" class="mode-description">Spiegazioni chiare, esempi concreti e domande per entrare nel problema.</p>
+      <div class="progress-card"><div><strong id="progressLabel">0 di 12 tappe completate</strong><span id="progressPercent">0%</span></div><div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div><p>Il progresso resta sul dispositivo. Serve a ritrovare il filo, non a misurare il tuo valore.</p></div>
+      <div class="module-grid" id="moduleGrid"></div>
+    </div></section>
+    <section class="section lab-section" id="laboratorio" aria-labelledby="labTitle"><div class="wrap">
+      <p class="eyebrow">Laboratorio · Sicurezza e costruzione</p>
+      <h2 id="labTitle">Metti alla prova la logica politica di Hobbes</h2>
+      <p class="section-lead light">Nel primo laboratorio distingui sicurezza, libertà e rischio; nel secondo ricostruisci il passaggio dalle leggi di natura all’autorizzazione del sovrano.</p>
+      <div class="lab-tabs" role="tablist" aria-label="Laboratori hobbesiani">
+        <button class="active" data-lab-tab="security" role="tab" aria-selected="true">Sicurezza e libertà</button>
+        <button data-lab-tab="covenant" role="tab" aria-selected="false">Costruisci il Leviatano</button>
+      </div>
+      <div id="securityLab" class="lab-panel" aria-live="polite"><div class="lab-meter"><span id="labProgress">Caso 1 di 6</span><strong id="labScore">0 letture ricostruite</strong></div><div id="securityCase"></div></div>
+      <div id="covenantLab" class="lab-panel" aria-live="polite" hidden></div>
+    </div></section>
+    <section class="section sources" id="fonti" aria-labelledby="sourcesTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow dark">Approfondisco · Testi e interpretazioni</p><h2 id="sourcesTitle">La voce di Hobbes, il lavoro degli studiosi</h2><p>Ogni scheda distingue testo primario, contesto, interpretazione e problema aperto.</p></div>
+      <div class="source-grid" id="sourceGrid"></div>
+    </div></section>
+    <section class="section comics" id="fumetti" aria-labelledby="comicsTitle"><div class="wrap">
+      <p class="eyebrow">A fumetti · Otto scene</p><h2 id="comicsTitle">Una vita tra paura, esilio e costruzione politica</h2>
+      <p class="section-lead light">La biografia non dimostra la filosofia. Ricostruisce il mondo nel quale Hobbes pensò ordine e sicurezza, distinguendo fatti attestati e interpretazioni.</p>
+      <div class="comic-strip" id="comicStrip"></div>
+    </div></section>
+    <section class="section maps-section" id="mappe" aria-labelledby="mapsTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">Mappe concettuali</p><h2 id="mapsTitle">Segui i passaggi e le tensioni del sistema</h2></div>
+      <div class="map-layout"><div class="map-tabs" id="mapTabs" role="tablist" aria-label="Mappe disponibili"></div><div class="concept-map" id="conceptMap" aria-live="polite"></div></div>
+    </div></section>
+    <section class="section tools-section" id="strumenti" aria-labelledby="toolsTitle"><div class="wrap">
+      <p class="eyebrow dark">Strumenti</p><h2 id="toolsTitle">Ritrova, confronta, verifica</h2>
+      <div class="tool-grid">
+        <button data-tool="glossary"><span>Ab</span><strong>Dizionario</strong><small>Ventotto parole per orientarsi fra natura, patto e sovranità.</small></button>
+        <button data-tool="timeline"><span>↝</span><strong>Linea del tempo</strong><small>Vita, opere e contesto dal 1588 al 1679.</small></button>
+        <button data-tool="library"><span>▤</span><strong>Biblioteca</strong><small>Elements of Law, De Cive, Leviathan e le opere della maturità.</small></button>
+        <button data-tool="comparisons"><span>⇄</span><strong>Confronti</strong><small>Aristotele, Grozio, Locke, Rousseau, Kant e le relazioni internazionali.</small></button>
+        <button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Risposte spiegate, stato salvato e recupero mirato.</small></button>
+        <button data-tool="sources"><span>↗</span><strong>Fonti accademiche</strong><small>Solo università e archivi universitari consultati.</small></button>
+      </div>
+    </div></section>
+    <section class="closing"><div class="wrap narrow"><p class="eyebrow">La domanda che resta</p><blockquote>Quanta libertà possiamo consegnare allo Stato perché ci protegga, prima che la protezione diventi una nuova forma di paura?</blockquote><p>Hobbes mostra che l’ordine politico non nasce dalla naturale armonia degli uomini, ma dalla loro vulnerabilità e dalla ragionevole ricerca della pace. Resta aperta la tensione decisiva: il potere che ci libera dalla paura reciproca può diventare esso stesso oggetto di paura.</p></div></section>
+  </main>
+  <footer class="footer"><p>Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p><p><a href="../">← Torna all’indice di Filosofia</a> · <button data-tool="sources" class="text-button">Fonti universitarie</button> · <button id="installButton" class="text-button">Installa la PWA</button></p></footer>
+  <aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-backdrop" data-close="drawer"></div><div class="drawer-panel"><button class="close-button" id="drawerClose" aria-label="Chiudi l’indice">×</button><p class="eyebrow">Indice generale</p><h2>Attraversa Hobbes</h2><nav id="drawerNav"></nav><div class="drawer-progress"><span>Progresso</span><strong id="drawerProgress">0%</strong></div></div></aside>
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true"><header><div><p class="eyebrow">Taccuino</p><h2>Le tue osservazioni</h2></div><button id="notesClose" aria-label="Chiudi il taccuino">×</button></header><textarea id="notesArea" aria-label="Appunti personali" placeholder="Scrivi qui domande, collegamenti, obiezioni…"></textarea><div class="notes-actions"><span id="notesStatus" aria-live="polite"></span><button id="exportNotes">Esporta .txt</button></div></aside>
+  <dialog id="contentDialog" class="content-dialog"><button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="searchDialog" class="search-dialog"><button class="dialog-close" id="searchClose" aria-label="Chiudi ricerca">×</button><p class="eyebrow dark">Ricerca interna</p><h2>Cerca un concetto</h2><label class="search-box"><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Per esempio: stato di natura, patto, sovranità…" autocomplete="off"></label><div id="searchResults" class="search-results" aria-live="polite"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./data.js"></script><script src="./app.js"></script>
+</body>
+</html>
+
