@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171019">
+  <meta name="description" content="Sigmund Freud: una PWA didattica interattiva sull'inconscio dinamico, la nascita della psicoanalisi, i modelli della psiche e il loro statuto storico e scientifico.">
+  <title>Freud — L’io non è padrone in casa propria</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+  <header class="topbar">
+    <button class="round-button" id="menuButton" aria-label="Apri l’indice" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Torna alla copertina">
+      <span class="brand-mark">S·F</span>
+      <span><strong>Sigmund Freud</strong><small>L’io non è padrone in casa propria</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="fontButton" aria-label="Cambia la dimensione del testo">A</button>
+      <button class="icon-button" id="notesButton" aria-label="Apri il taccuino">✎</button>
+      <button class="icon-button" id="searchButton" aria-label="Cerca nella PWA">⌕</button>
+      <button class="index-button" id="indexButton">▤ <span>Indice</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <img class="hero-image" src="./assets/cover-freud.webp" alt="Studio viennese al crepuscolo: una stanza ordinata si apre su un corridoio profondo, uno specchio restituisce una figura frammentata e le ombre degli oggetti non coincidono perfettamente con le loro forme.">
+      <div class="hero-shade"></div><div class="hero-grain" aria-hidden="true"></div>
+      <button class="hero-hotspot hotspot-dream" data-hotspot="dream" aria-label="Scopri il sogno"><span>Sogno</span></button>
+      <button class="hero-hotspot hotspot-symptom" data-hotspot="symptom" aria-label="Scopri il sintomo"><span>Sintomo</span></button>
+      <button class="hero-hotspot hotspot-slip" data-hotspot="slip" aria-label="Scopri il lapsus"><span>Lapsus</span></button>
+      <div class="hero-copy">
+        <p class="eyebrow">Filosofia contemporanea · La crisi del soggetto</p>
+        <h1 id="heroTitle">L’io non è padrone<br><em>in casa propria.</em></h1>
+        <p class="hero-lead">Se una parte decisiva della nostra vita psichica agisce senza diventare cosciente, che cosa resta della libertà, della responsabilità e della conoscenza di noi stessi?</p>
+        <div class="hero-actions"><a class="primary-button" href="#scopro">Entra nel problema</a><a class="secondary-button" href="#laboratorio">Metti alla prova il modello</a></div>
+      </div>
+      <p class="hero-hint">Tocca i tre punti luminosi</p>
+    </section>
+
+    <section class="portal section-dark" aria-labelledby="portalTitle"><div class="wrap">
+      <p class="eyebrow">Quattro ingressi</p>
+      <h2 id="portalTitle">Non imparare una lista di termini: osserva come Freud costruisce un modello per spiegare ciò che la coscienza non riesce a rendere trasparente.</h2>
+      <div class="portal-grid">
+        <a href="#scopro" class="portal-card" data-num="01"><span>Esperimento guidato</span><h3>Scopro</h3><p>Separa ciò che vediamo, ciò che diciamo di noi stessi e ciò che un’interpretazione aggiunge.</p></a>
+        <a href="#studio" class="portal-card" data-num="02"><span>Percorso</span><h3>Studio</h3><p>Dodici tappe a due livelli, dalla neurologia viennese al disagio della civiltà.</p></a>
+        <a href="#fonti" class="portal-card" data-num="03"><span>Opere e problemi</span><h3>Approfondisco</h3><p>Testi, contesti, revisioni e controversie restano distinti e documentati.</p></a>
+        <a href="#fumetti" class="portal-card" data-num="04"><span>Biografia visuale</span><h3>A fumetti</h3><p>Otto scene documentate, da Vienna e Parigi fino all’esilio londinese.</p></a>
+      </div>
+    </div></section>
+
+    <section class="section paper" id="scopro" aria-labelledby="scoproTitle"><div class="wrap narrow">
+      <p class="eyebrow dark">Scopro · Prima osserva, poi interpreta</p>
+      <h2 id="scoproTitle">Quanto sappiamo davvero delle ragioni di un’azione?</h2>
+      <p class="section-lead">Le situazioni sono inventate e non cliniche. Non producono diagnosi né punteggi: allenano a distinguere comportamento osservabile, spiegazione dichiarata, ipotesi interpretativa ed elementi che resistono alla spiegazione.</p>
+      <div class="discovery" id="discovery" aria-live="polite"></div>
+    </div></section>
+
+    <section class="section studio" id="studio" aria-labelledby="studioTitle"><div class="wrap">
+      <div class="section-heading split"><div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla coscienza come centro al soggetto attraversato dal conflitto</h2></div>
+        <div class="mode-switch" role="group" aria-label="Livello di lettura"><button data-mode="amateur" class="active">Primo incontro</button><button data-mode="student">Studio filosofico</button></div>
+      </div>
+      <p id="modeDescription" class="mode-description">Una narrazione chiara, esempi fittizi e concetti essenziali per entrare nel problema.</p>
+      <div class="progress-card"><div><strong id="progressLabel">0 di 12 tappe completate</strong><span id="progressPercent">0%</span></div><div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div><p>Il progresso resta sul dispositivo. Segna il filo del percorso, non misura la persona che studia.</p></div>
+      <div class="module-grid" id="moduleGrid"></div>
+    </div></section>
+
+    <section class="section lab-section" id="laboratorio" aria-labelledby="labTitle"><div class="wrap">
+      <p class="eyebrow">Laboratorio · Interpretare senza diagnosticare</p>
+      <h2 id="labTitle">Tre modelli sotto pressione</h2>
+      <p class="section-lead light">Qui si applicano e si criticano modelli freudiani su materiali inventati. Nessun esercizio pretende di scoprire il significato “vero” di sogni, sintomi o comportamenti reali.</p>
+      <div class="lab-tabs" role="tablist" aria-label="Laboratori freudiani">
+        <button class="active" data-lab-tab="dream" role="tab" aria-selected="true">Il sogno come testo trasformato</button>
+        <button data-lab-tab="symptom" role="tab" aria-selected="false">Il sintomo come compromesso</button>
+        <button data-lab-tab="interpretation" role="tab" aria-selected="false">Quanto regge un’interpretazione?</button>
+      </div>
+      <div id="dreamLab" class="lab-panel" aria-live="polite"></div>
+      <div id="symptomLab" class="lab-panel" aria-live="polite" hidden></div>
+      <div id="interpretationLab" class="lab-panel" aria-live="polite" hidden></div>
+    </div></section>
+
+    <section class="section sources" id="fonti" aria-labelledby="sourcesTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow dark">Approfondisco · Opere e problemi</p><h2 id="sourcesTitle">Che cosa scrive Freud, quando lo scrive, dove il modello cambia</h2><p>Ogni scheda indica statuto editoriale, problema, tesi e limite. Le ricostruzioni storiche e le valutazioni contemporanee non vengono fatte passare per parole di Freud.</p></div>
+      <div class="source-grid" id="sourceGrid"></div>
+    </div></section>
+
+    <section class="section comics" id="fumetti" aria-labelledby="comicsTitle"><div class="wrap">
+      <p class="eyebrow">A fumetti · Otto scene documentate</p><h2 id="comicsTitle">Una biografia che orienta senza spiegare tutto</h2>
+      <p class="section-lead light">Gli eventi biografici danno un contesto alle idee, ma non vengono usati come scorciatoia psicologica per “dedurre” automaticamente una teoria.</p>
+      <div class="comic-strip" id="comicStrip"></div>
+    </div></section>
+
+    <section class="section maps-section" id="mappe" aria-labelledby="mapsTitle"><div class="wrap">
+      <div class="section-heading"><p class="eyebrow">Mappe concettuali · 5 percorsi</p><h2 id="mapsTitle">Segui conflitti, trasformazioni e revisioni</h2></div>
+      <div class="map-layout"><div class="map-tabs" id="mapTabs" role="tablist" aria-label="Mappe disponibili"></div><div class="concept-map" id="conceptMap" aria-live="polite"></div></div>
+    </div></section>
+
+    <section class="section tools-section" id="strumenti" aria-labelledby="toolsTitle"><div class="wrap">
+      <p class="eyebrow dark">Strumenti</p><h2 id="toolsTitle">Ritrova, confronta, verifica</h2>
+      <div class="tool-grid">
+        <button data-tool="glossary"><span>Ab</span><strong>Glossario</strong><small>Trenta termini, con distinzioni che evitano le semplificazioni più comuni.</small></button>
+        <button data-tool="timeline"><span>↝</span><strong>Cronologia</strong><small>Formazione, opere, revisioni teoriche e contesto storico.</small></button>
+        <button data-tool="library"><span>▤</span><strong>Biblioteca ragionata</strong><small>Dodici opere con statuto, problema e posto nell’evoluzione del pensiero.</small></button>
+        <button data-tool="comparisons"><span>⇄</span><strong>Confronti filosofici</strong><small>Cartesio, Schopenhauer, Nietzsche, Marx, Jung, Popper e scienze contemporanee.</small></button>
+        <button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Domande di relazione, spiegazioni per ogni alternativa e recupero mirato.</small></button>
+        <button data-tool="academics"><span>↗</span><strong>Fonti accademiche</strong><small>Università, archivi, musei e associazioni professionali realmente consultati.</small></button>
+      </div>
+    </div></section>
+
+    <section class="closing"><div class="wrap narrow"><p class="eyebrow">La domanda che resta</p><blockquote>Se non siamo pienamente trasparenti a noi stessi, la libertà scompare oppure diventa un compito più difficile?</blockquote><p>Freud rende sospetta l’idea di un io sovrano che conosce immediatamente le proprie ragioni. Ma un modello interpretativo potente non diventa vero solo perché riesce a raccontare tutto. Il lascito più fertile sta forse proprio nella doppia esigenza che apre: prendere sul serio ciò che sfugge alla coscienza e, nello stesso tempo, chiedere a ogni interpretazione quali prove potrebbero correggerla.</p></div></section>
+  </main>
+
+  <footer class="footer"><p>Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p><p><a href="../">← Torna all’indice di Filosofia</a> · <button data-tool="academics" class="text-button">Fonti accademiche</button> · <button id="installButton" class="text-button">Installa la PWA</button></p></footer>
+
+  <aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-backdrop" data-close="drawer"></div><div class="drawer-panel"><button class="close-button" id="drawerClose" aria-label="Chiudi l’indice">×</button><p class="eyebrow">Indice generale</p><h2>Attraversa Freud</h2><nav id="drawerNav"></nav><div class="drawer-progress"><span>Progresso</span><strong id="drawerProgress">0%</strong></div></div></aside>
+  <aside class="notes-panel" id="notesPanel" aria-hidden="true"><header><div><p class="eyebrow">Taccuino</p><h2>Le tue osservazioni</h2></div><button id="notesClose" aria-label="Chiudi il taccuino">×</button></header><textarea id="notesArea" aria-label="Appunti personali" placeholder="Scrivi qui domande, collegamenti, obiezioni…"></textarea><div class="notes-actions"><span id="notesStatus" aria-live="polite"></span><button id="exportNotes">Esporta .txt</button></div></aside>
+  <dialog id="contentDialog" class="content-dialog"><button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="searchDialog" class="search-dialog"><button class="dialog-close" id="searchClose" aria-label="Chiudi ricerca">×</button><p class="eyebrow dark">Ricerca interna</p><h2>Cerca un concetto</h2><label class="search-box"><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Per esempio: rimozione, sogno, Es, falsificabilità…" autocomplete="off"></label><div id="searchResults" class="search-results" aria-live="polite"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./data.js"></script><script src="./app.js"></script>
+</body>
+</html>
