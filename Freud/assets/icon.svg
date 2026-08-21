@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Icona Freud">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b1728"/><stop offset="1" stop-color="#151018"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity=".25"/></filter></defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <path d="M128 88h256v336H128z" fill="none" stroke="#d6b574" stroke-width="15"/>
+  <path d="M128 88l140 55v281H128z" fill="#6f495f" opacity=".68"/>
+  <path d="M290 160h56v190h-56z" fill="#1b2930" stroke="#76a19d" stroke-width="8"/>
+  <circle cx="318" cy="253" r="16" fill="#e4c17d"/>
+  <path d="M193 170c40 35 40 120 0 156m-18-114c42 14 58 55 18 91" fill="none" stroke="#eadccf" stroke-width="12" stroke-linecap="round" filter="url(#s)"/>
+</svg>
