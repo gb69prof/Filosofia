@@ -1,0 +1,14 @@
+{
+  "name": "Freud — L’io non è padrone in casa propria",
+  "short_name": "Freud",
+  "description": "PWA didattica interattiva su Freud, inconscio dinamico, psicoanalisi, modelli della psiche e critica del loro statuto scientifico.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#171019",
+  "theme_color": "#171019",
+  "icons": [
+    {"src":"./assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
