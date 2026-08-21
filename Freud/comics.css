@@ -1,0 +1,13 @@
+#fumetti .comic-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+#fumetti .comic-card{min-height:0;padding:0;overflow:hidden;border:1px solid rgba(154,109,226,.34);border-radius:.85rem;background:#0c1624;box-shadow:0 16px 36px rgba(0,0,0,.22)}
+#fumetti .comic-card picture,#fumetti .comic-card img{display:block;width:100%}
+#fumetti .comic-card img{aspect-ratio:4/3;object-fit:cover;background:#111827}
+#fumetti .comic-card-body{padding:.9rem 1rem 1rem}
+#fumetti .comic-year{display:inline-block;margin-bottom:.35rem;color:#c99cf8;font-weight:900;font-size:.68rem;letter-spacing:.08em}
+#fumetti .comic-card h3{margin:.15rem 0 .4rem;color:#f1f5fa;font-size:1.25rem}
+#fumetti .comic-card p{margin:.25rem 0;color:#b7c3d1;font-size:.83rem;line-height:1.5}
+#fumetti .comic-status{display:block;margin-top:.6rem;padding-top:.55rem;border-top:1px solid rgba(255,255,255,.1);color:#8191a5;font-size:.61rem;text-transform:uppercase;letter-spacing:.05em}
+#fumetti .comic-card:hover{transform:translateY(-3px);border-color:#a77ae8}
+.comic-concept{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:.7rem;margin-top:.4rem;padding:1rem;border:1px solid #9a6de244;border-radius:.85rem;background:linear-gradient(135deg,#171a2d,#0e1a29)}
+.comic-concept>div{padding:.8rem;border-radius:.65rem;background:#ffffff06}.comic-concept strong{display:block;margin-bottom:.25rem;color:#e5d7fa}.comic-concept small{color:#9eacbd;line-height:1.45}.comic-concept .es{border-top:3px solid #cc6387}.comic-concept .io{border-top:3px solid #49b6c4}.comic-concept .superio{border-top:3px solid #9a6de2}
+@media(max-width:850px){#fumetti .comic-strip{grid-template-columns:1fr}.comic-concept{grid-template-columns:1fr}}
