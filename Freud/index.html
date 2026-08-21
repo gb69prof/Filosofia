@@ -10,6 +10,8 @@
   <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./dashboard.css">
+  <link rel="stylesheet" href="./topica.css">
+  <link rel="stylesheet" href="./comics.css">
 </head>
 <body class="dashboard-body">
   <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -35,181 +37,49 @@
 
   <div class="dashboard-shell">
     <aside class="left-rail" aria-label="Percorso di Filosofia">
-      <div class="rail-block rail-title">
-        <span class="rail-label">Collana</span>
-        <strong>Le grandi lezioni di Filosofia</strong>
-      </div>
+      <div class="rail-block rail-title"><span class="rail-label">Collana</span><strong>Le grandi lezioni di Filosofia</strong></div>
       <div class="rail-block">
         <span class="rail-label">Epoche</span>
-        <a class="epoch-link" href="../#antica">▥ Antica</a>
-        <a class="epoch-link" href="../#medievale">▦ Medievale</a>
-        <a class="epoch-link" href="../#moderna">◫ Moderna</a>
-        <div class="epoch-open">
-          <a class="epoch-link active" href="../#contemporanea">◉ Contemporanea</a>
-          <a class="thinker-link" href="../Nietzsche/"><span>Nietzsche<small>1844–1900</small></span><b>✓</b></a>
-          <span class="thinker-link current"><span>Freud<small>1856–1939</small></span><b>●</b></span>
-          <span class="thinker-link muted"><span>Husserl<small>1859–1938</small></span><b>○</b></span>
-          <span class="thinker-link muted"><span>Bergson<small>1859–1941</small></span><b>○</b></span>
-          <span class="thinker-link muted"><span>Wittgenstein<small>1889–1951</small></span><b>○</b></span>
-          <span class="thinker-link muted"><span>Heidegger<small>1889–1976</small></span><b>○</b></span>
-        </div>
+        <a class="epoch-link" href="../#antica">▥ Antica</a><a class="epoch-link" href="../#medievale">▦ Medievale</a><a class="epoch-link" href="../#moderna">◫ Moderna</a>
+        <div class="epoch-open"><a class="epoch-link active" href="../#contemporanea">◉ Contemporanea</a><a class="thinker-link" href="../Nietzsche/"><span>Nietzsche<small>1844–1900</small></span><b>✓</b></a><span class="thinker-link current"><span>Freud<small>1856–1939</small></span><b>●</b></span><span class="thinker-link muted"><span>Husserl<small>1859–1938</small></span><b>○</b></span><span class="thinker-link muted"><span>Bergson<small>1859–1941</small></span><b>○</b></span><span class="thinker-link muted"><span>Wittgenstein<small>1889–1951</small></span><b>○</b></span><span class="thinker-link muted"><span>Heidegger<small>1889–1976</small></span><b>○</b></span></div>
       </div>
-      <nav class="rail-block lesson-nav" aria-label="Quattro ingressi">
-        <span class="rail-label">I quattro ingressi</span>
-        <a href="#scopro"><i>◉</i><span><strong>Scopro</strong><small>Esperienza guidata</small></span></a>
-        <a href="#studio"><i>▤</i><span><strong>Studio</strong><small>Dodici tappe</small></span></a>
-        <a href="#fonti"><i>⌕</i><span><strong>Approfondisco</strong><small>Opere e problemi</small></span></a>
-        <a href="#fumetti"><i>☵</i><span><strong>A fumetti</strong><small>Otto scene</small></span></a>
-      </nav>
-      <nav class="rail-block lesson-nav" aria-label="Laboratori">
-        <span class="rail-label">Laboratori interattivi</span>
-        <a href="#laboratorio"><i>◒</i><span><strong>Il sogno</strong><small>Lavoro onirico</small></span></a>
-        <a href="#laboratorio"><i>↯</i><span><strong>Il sintomo</strong><small>Compromesso</small></span></a>
-        <a href="#laboratorio"><i>◇</i><span><strong>Interpretazioni</strong><small>Prova e limite</small></span></a>
-      </nav>
-      <div class="rail-block offline-card">
-        <span class="offline-icon">⌁</span>
-        <strong>Questa PWA funziona anche offline</strong>
-        <small>Progressi e appunti restano sul dispositivo.</small>
-      </div>
+      <nav class="rail-block lesson-nav" aria-label="Quattro ingressi"><span class="rail-label">I quattro ingressi</span><a href="#scopro"><i>◉</i><span><strong>Scopro</strong><small>Esperienza guidata</small></span></a><a href="#studio"><i>▤</i><span><strong>Studio</strong><small>Dodici tappe</small></span></a><a href="#fonti"><i>⌕</i><span><strong>Approfondisco</strong><small>Opere e problemi</small></span></a><a href="#fumetti"><i>☵</i><span><strong>A fumetti</strong><small>Otto scene</small></span></a></nav>
+      <nav class="rail-block lesson-nav" aria-label="Laboratori"><span class="rail-label">Laboratori interattivi</span><a href="#laboratorio"><i>◒</i><span><strong>Il sogno</strong><small>Lavoro onirico</small></span></a><a href="#laboratorio"><i>↯</i><span><strong>Il sintomo</strong><small>Compromesso</small></span></a><a href="#laboratorio"><i>◇</i><span><strong>Interpretazioni</strong><small>Prova e limite</small></span></a><a href="#seconda-topica"><i>Ψ</i><span><strong>Es · Io · Super-io</strong><small>Seconda topica</small></span></a></nav>
+      <div class="rail-block offline-card"><span class="offline-icon">⌁</span><strong>Questa PWA funziona anche offline</strong><small>Progressi e appunti restano sul dispositivo.</small></div>
     </aside>
 
     <main id="main" class="dashboard-main">
       <section class="dashboard-home" id="home" aria-labelledby="heroTitle">
-        <article class="hero dashboard-hero">
-          <img class="hero-image" src="./assets/cover-freud-dashboard.webp" alt="Ritratto in tonalità viola inserito in un collage grafico dedicato alla psicoanalisi.">
-          <div class="hero-shade"></div>
-          <div class="hero-copy">
-            <p class="eyebrow">Freud · L’inconscio e la crisi del soggetto</p>
-            <h1 id="heroTitle">L’io non è padrone<br><em>in casa propria.</em></h1>
-            <p class="hero-subtitle">L’inconscio e la crisi dell’io padrone di sé.</p>
-            <div class="generative-question">
-              <span>?</span>
-              <div><strong>Domanda generatrice</strong><p>Se una parte decisiva della nostra vita psichica agisce senza diventare cosciente, che cosa resta della libertà, della responsabilità e della conoscenza di noi stessi?</p></div>
-            </div>
-          </div>
-        </article>
-
-        <div class="dashboard-portal" aria-label="Quattro ingressi principali">
-          <a href="#scopro" class="dash-entry discover"><span class="entry-icon">◉</span><div><strong>Scopro</strong><small>Prima osserva, poi interpreta</small></div><b>→</b></a>
-          <a href="#studio" class="dash-entry study"><span class="entry-icon">▤</span><div><strong>Studio</strong><small>Percorso sistematico</small></div><b>→</b></a>
-          <a href="#fonti" class="dash-entry deepen"><span class="entry-icon">⌕</span><div><strong>Approfondisco</strong><small>Fonti, problemi, critiche</small></div><b>→</b></a>
-          <a href="#fumetti" class="dash-entry comics-entry"><span class="entry-icon">☵</span><div><strong>A fumetti</strong><small>La biografia raccontata</small></div><b>→</b></a>
-        </div>
-
+        <article class="hero dashboard-hero"><img class="hero-image" src="./assets/cover-freud-dashboard.webp" alt="Ritratto in tonalità viola inserito in un collage grafico dedicato alla psicoanalisi."><div class="hero-shade"></div><div class="hero-copy"><p class="eyebrow">Freud · L’inconscio e la crisi del soggetto</p><h1 id="heroTitle">L’io non è padrone<br><em>in casa propria.</em></h1><p class="hero-subtitle">L’inconscio e la crisi dell’io padrone di sé.</p><div class="generative-question"><span>?</span><div><strong>Domanda generatrice</strong><p>Se una parte decisiva della nostra vita psichica agisce senza diventare cosciente, che cosa resta della libertà, della responsabilità e della conoscenza di noi stessi?</p></div></div></div></article>
+        <div class="dashboard-portal" aria-label="Quattro ingressi principali"><a href="#scopro" class="dash-entry discover"><span class="entry-icon">◉</span><div><strong>Scopro</strong><small>Prima osserva, poi interpreta</small></div><b>→</b></a><a href="#studio" class="dash-entry study"><span class="entry-icon">▤</span><div><strong>Studio</strong><small>Percorso sistematico</small></div><b>→</b></a><a href="#fonti" class="dash-entry deepen"><span class="entry-icon">⌕</span><div><strong>Approfondisco</strong><small>Fonti, problemi, critiche</small></div><b>→</b></a><a href="#fumetti" class="dash-entry comics-entry"><span class="entry-icon">☵</span><div><strong>A fumetti</strong><small>La biografia raccontata</small></div><b>→</b></a></div>
         <div class="dashboard-widgets">
-          <section class="dash-panel labs-preview">
-            <header><div><span class="panel-icon">⚗</span><div><strong>Laboratori interattivi</strong><small>Impara facendo: esplora, collega, verifica.</small></div></div><a href="#laboratorio">Vedi tutti</a></header>
-            <div class="mini-grid">
-              <a href="#laboratorio"><span>◒</span><strong>Il sogno</strong><small>Condensazione, spostamento e lavoro onirico.</small></a>
-              <a href="#laboratorio"><span>↯</span><strong>Il sintomo</strong><small>Ricostruisci una formazione di compromesso.</small></a>
-              <a href="#laboratorio"><span>◇</span><strong>Quanto regge?</strong><small>Distingui osservazione, inferenza e prova contraria.</small></a>
-              <a href="#mappe"><span>⌘</span><strong>Mappe</strong><small>Visualizza prima e seconda topica.</small></a>
-            </div>
-          </section>
-
-          <section class="dash-panel path-preview">
-            <header><div><span class="panel-icon">↝</span><div><strong>Percorso di studio</strong><small>Riprendi dal punto in cui eri arrivato.</small></div></div><a href="#studio">Riprendi</a></header>
-            <div class="path-feature"><span>L’inconscio dinamico</span><b>→</b></div>
-            <div class="path-list"><span>✓ Dalla neurologia alla parola</span><span>✓ Rimozione e resistenza</span><span>○ Il lavoro onirico</span><span>○ Es, Io e Super-io</span></div>
-          </section>
-
-          <section class="dash-panel thought-preview">
-            <header><div><span class="panel-icon">“</span><div><strong>Una frase da interrogare</strong><small>Non una citazione da imparare.</small></div></div></header>
-            <blockquote>La coscienza non coincide con l’intera vita psichica.</blockquote>
-            <div class="featured-work"><span>Opera in evidenza</span><strong>L’interpretazione dei sogni</strong><small>1900 · il sogno come via per studiare il lavoro psichico.</small><button type="button" data-tool="library">Apri la biblioteca →</button></div>
-          </section>
+          <section class="dash-panel labs-preview"><header><div><span class="panel-icon">⚗</span><div><strong>Laboratori interattivi</strong><small>Impara facendo: esplora, collega, verifica.</small></div></div><a href="#laboratorio">Vedi tutti</a></header><div class="mini-grid"><a href="#laboratorio"><span>◒</span><strong>Il sogno</strong><small>Condensazione, spostamento e lavoro onirico.</small></a><a href="#laboratorio"><span>↯</span><strong>Il sintomo</strong><small>Ricostruisci una formazione di compromesso.</small></a><a href="#laboratorio"><span>◇</span><strong>Quanto regge?</strong><small>Distingui osservazione, inferenza e prova contraria.</small></a><a href="#seconda-topica"><span>Ψ</span><strong>Es · Io · Super-io</strong><small>Capisci la seconda topica e prova la mediazione.</small></a></div></section>
+          <section class="dash-panel path-preview"><header><div><span class="panel-icon">↝</span><div><strong>Percorso di studio</strong><small>Riprendi dal punto in cui eri arrivato.</small></div></div><a href="#studio">Riprendi</a></header><div class="path-feature"><span>L’inconscio dinamico</span><b>→</b></div><div class="path-list"><span>✓ Dalla neurologia alla parola</span><span>✓ Rimozione e resistenza</span><span>○ Il lavoro onirico</span><span>○ Es, Io e Super-io</span></div></section>
+          <section class="dash-panel thought-preview"><header><div><span class="panel-icon">“</span><div><strong>Una frase da interrogare</strong><small>Non una citazione da imparare.</small></div></div></header><blockquote>La coscienza non coincide con l’intera vita psichica.</blockquote><div class="featured-work"><span>Opera in evidenza</span><strong>L’interpretazione dei sogni</strong><small>1900 · il sogno come via per studiare il lavoro psichico.</small><button type="button" data-tool="library">Apri la biblioteca →</button></div></section>
         </div>
       </section>
 
-      <section class="section paper dashboard-section" id="scopro" aria-labelledby="scoproTitle"><div class="wrap narrow">
-        <p class="eyebrow dark">Scopro · Prima osserva, poi interpreta</p>
-        <h2 id="scoproTitle">Quanto sappiamo davvero delle ragioni di un’azione?</h2>
-        <p class="section-lead">Situazioni inventate e non cliniche allenano a distinguere comportamento osservabile, spiegazione dichiarata, ipotesi interpretativa ed elementi che resistono alla spiegazione.</p>
-        <div class="discovery" id="discovery" aria-live="polite"></div>
-      </div></section>
+      <section class="section paper dashboard-section" id="scopro" aria-labelledby="scoproTitle"><div class="wrap narrow"><p class="eyebrow dark">Scopro · Prima osserva, poi interpreta</p><h2 id="scoproTitle">Quanto sappiamo davvero delle ragioni di un’azione?</h2><p class="section-lead">Situazioni inventate e non cliniche allenano a distinguere comportamento osservabile, spiegazione dichiarata, ipotesi interpretativa ed elementi che resistono alla spiegazione.</p><div class="discovery" id="discovery" aria-live="polite"></div></div></section>
 
-      <section class="section studio dashboard-section" id="studio" aria-labelledby="studioTitle"><div class="wrap">
-        <div class="section-heading split"><div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla coscienza come centro al soggetto attraversato dal conflitto</h2></div></div>
-        <p id="modeDescription" class="mode-description">Una narrazione chiara, esempi fittizi e concetti essenziali per entrare nel problema.</p>
-        <div class="module-grid" id="moduleGrid"></div>
-      </div></section>
+      <section class="section studio dashboard-section" id="studio" aria-labelledby="studioTitle"><div class="wrap"><div class="section-heading split"><div><p class="eyebrow">Studio · Dodici tappe</p><h2 id="studioTitle">Dalla coscienza come centro al soggetto attraversato dal conflitto</h2></div></div><p id="modeDescription" class="mode-description">Una narrazione chiara, esempi fittizi e concetti essenziali per entrare nel problema.</p><div class="module-grid" id="moduleGrid"></div></div></section>
 
-      <section class="section lab-section dashboard-section" id="laboratorio" aria-labelledby="labTitle"><div class="wrap">
-        <p class="eyebrow">Laboratorio · Interpretare senza diagnosticare</p>
-        <h2 id="labTitle">Tre modelli sotto pressione</h2>
-        <p class="section-lead light">Si applicano e si criticano modelli freudiani su materiali inventati. Nessun esercizio pretende di scoprire il significato “vero” di sogni, sintomi o comportamenti reali.</p>
-        <div class="lab-tabs" role="tablist" aria-label="Laboratori freudiani">
-          <button class="active" data-lab-tab="dream" role="tab" aria-selected="true">Il sogno come testo trasformato</button>
-          <button data-lab-tab="symptom" role="tab" aria-selected="false">Il sintomo come compromesso</button>
-          <button data-lab-tab="interpretation" role="tab" aria-selected="false">Quanto regge un’interpretazione?</button>
-        </div>
-        <div id="dreamLab" class="lab-panel" aria-live="polite"></div>
-        <div id="symptomLab" class="lab-panel" aria-live="polite" hidden></div>
-        <div id="interpretationLab" class="lab-panel" aria-live="polite" hidden></div>
-      </div></section>
+      <section class="section dashboard-section topica-section" id="seconda-topica" aria-labelledby="topicaTitle"><div class="wrap"><div class="section-heading"><p class="eyebrow">Seconda topica · 1923</p><h2 id="topicaTitle">Es, Io e Super-io: il conflitto entra nella struttura dell’io</h2><p>Con <em>L’Io e l’Es</em> Freud non disegna tre parti anatomiche del cervello. Propone un nuovo modello teorico per descrivere come pulsioni, realtà, divieti e ideali entrino in tensione.</p></div><div class="topica-intro"><div class="topica-note"><strong>Il passaggio decisivo</strong><p>La prima topica distingue <b>conscio, preconscio e inconscio</b>. La seconda topica distingue <b>Es, Io e Super-io</b>. I due modelli rispondono a domande differenti: non vanno sovrapposti come se fossero due mappe anatomiche.</p></div><div class="topica-note"><strong>Tre equivoci da evitare</strong><p>L’Es non coincide con tutto l’inconscio; l’Io non coincide con la coscienza; il Super-io non è semplicemente la morale cosciente.</p></div></div><div class="topica-models"><article class="topica-card es" data-letter="E"><span>↯</span><h3>Es</h3><p><strong>Polo pulsionale.</strong> Raccoglie spinte e richieste di soddisfazione. È in larga parte inconscio e non ragiona secondo criteri morali.</p></article><article class="topica-card io" data-letter="I"><span>◇</span><h3>Io</h3><p><strong>Mediazione.</strong> Deve trattare con la realtà, con le richieste dell’Es e con il Super-io. Anche l’Io possiede funzioni inconsce.</p></article><article class="topica-card superio" data-letter="S"><span>⌃</span><h3>Super-io</h3><p><strong>Divieto e ideale.</strong> Interiorizza funzioni critiche, norme e modelli ideali; può proteggere, ma anche colpevolizzare.</p></article></div><div class="topica-relations"><div class="topica-mapbox"><h3>Prima topica</h3><ul><li><b>Conscio</b>: ciò che è presente alla coscienza.</li><li><b>Preconscio</b>: ciò che può diventare cosciente con relativa facilità.</li><li><b>Inconscio</b>: nel modello dinamico, processi legati a rimozione e resistenza.</li></ul></div><div class="topica-arrow">⇄</div><div class="topica-mapbox"><h3>Seconda topica</h3><ul><li><b>Es</b>: polo pulsionale.</li><li><b>Io</b>: mediazione e difese.</li><li><b>Super-io</b>: critica, divieti e ideali.</li></ul></div></div><div class="topica-warning"><div><b>Non dire:</b> “Es = inconscio”. Anche Io e Super-io hanno componenti inconsce.</div><div><b>Non dire:</b> “Io = coscienza”. Freud attribuisce all’Io anche difese inconsce.</div><div><b>Non dire:</b> “Super-io = educazione”. È un modello più complesso di interiorizzazione, ideale e autocritica.</div></div><div class="topica-lab" id="topicaLab" aria-live="polite"></div></div></section>
 
-      <section class="section sources dashboard-section" id="fonti" aria-labelledby="sourcesTitle"><div class="wrap">
-        <div class="section-heading"><p class="eyebrow dark">Approfondisco · Opere e problemi</p><h2 id="sourcesTitle">Che cosa scrive Freud, quando lo scrive, dove il modello cambia</h2><p>Ogni scheda indica statuto editoriale, problema, tesi e limite.</p></div>
-        <div class="source-grid" id="sourceGrid"></div>
-      </div></section>
+      <section class="section lab-section dashboard-section" id="laboratorio" aria-labelledby="labTitle"><div class="wrap"><p class="eyebrow">Laboratorio · Interpretare senza diagnosticare</p><h2 id="labTitle">Tre modelli sotto pressione</h2><p class="section-lead light">Si applicano e si criticano modelli freudiani su materiali inventati. Nessun esercizio pretende di scoprire il significato “vero” di sogni, sintomi o comportamenti reali.</p><div class="lab-tabs" role="tablist" aria-label="Laboratori freudiani"><button class="active" data-lab-tab="dream" role="tab" aria-selected="true">Il sogno come testo trasformato</button><button data-lab-tab="symptom" role="tab" aria-selected="false">Il sintomo come compromesso</button><button data-lab-tab="interpretation" role="tab" aria-selected="false">Quanto regge un’interpretazione?</button></div><div id="dreamLab" class="lab-panel" aria-live="polite"></div><div id="symptomLab" class="lab-panel" aria-live="polite" hidden></div><div id="interpretationLab" class="lab-panel" aria-live="polite" hidden></div></div></section>
 
-      <section class="section comics dashboard-section" id="fumetti" aria-labelledby="comicsTitle"><div class="wrap">
-        <p class="eyebrow">A fumetti · Otto scene documentate</p><h2 id="comicsTitle">Una biografia che orienta senza spiegare tutto</h2>
-        <p class="section-lead light">Gli eventi biografici danno un contesto alle idee senza diventare scorciatoie psicologiche.</p>
-        <div class="comic-strip" id="comicStrip"></div>
-      </div></section>
+      <section class="section sources dashboard-section" id="fonti" aria-labelledby="sourcesTitle"><div class="wrap"><div class="section-heading"><p class="eyebrow dark">Approfondisco · Opere e problemi</p><h2 id="sourcesTitle">Che cosa scrive Freud, quando lo scrive, dove il modello cambia</h2><p>Ogni scheda indica statuto editoriale, problema, tesi e limite.</p></div><div class="source-grid" id="sourceGrid"></div></div></section>
 
-      <section class="section maps-section dashboard-section" id="mappe" aria-labelledby="mapsTitle"><div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Mappe concettuali · 5 percorsi</p><h2 id="mapsTitle">Segui conflitti, trasformazioni e revisioni</h2></div>
-        <div class="map-layout"><div class="map-tabs" id="mapTabs" role="tablist" aria-label="Mappe disponibili"></div><div class="concept-map" id="conceptMap" aria-live="polite"></div></div>
-      </div></section>
+      <section class="section comics dashboard-section" id="fumetti" aria-labelledby="comicsTitle"><div class="wrap"><p class="eyebrow">A fumetti · Otto scene documentate</p><h2 id="comicsTitle">Una biografia che orienta senza spiegare tutto</h2><p class="section-lead light">Gli eventi biografici danno un contesto alle idee senza diventare scorciatoie psicologiche.</p><div class="comic-strip" id="comicStrip"></div></div></section>
 
-      <section class="section tools-section dashboard-section" id="strumenti" aria-labelledby="toolsTitle"><div class="wrap">
-        <p class="eyebrow dark">Strumenti</p><h2 id="toolsTitle">Ritrova, confronta, verifica</h2>
-        <div class="tool-grid">
-          <button data-tool="glossary"><span>Ab</span><strong>Glossario</strong><small>Trenta termini con distinzioni essenziali.</small></button>
-          <button data-tool="timeline"><span>↝</span><strong>Cronologia</strong><small>Formazione, opere e revisioni teoriche.</small></button>
-          <button data-tool="library"><span>▤</span><strong>Biblioteca ragionata</strong><small>Dodici opere nel movimento della teoria.</small></button>
-          <button data-tool="comparisons"><span>⇄</span><strong>Confronti filosofici</strong><small>Cartesio, Nietzsche, Marx, Jung e scienze contemporanee.</small></button>
-          <button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Relazioni fra concetti e recupero mirato.</small></button>
-          <button data-tool="academics"><span>↗</span><strong>Fonti accademiche</strong><small>Università, archivi, musei e associazioni professionali.</small></button>
-        </div>
-      </div></section>
+      <section class="section maps-section dashboard-section" id="mappe" aria-labelledby="mapsTitle"><div class="wrap"><div class="section-heading"><p class="eyebrow">Mappe concettuali · 5 percorsi</p><h2 id="mapsTitle">Segui conflitti, trasformazioni e revisioni</h2></div><div class="map-layout"><div class="map-tabs" id="mapTabs" role="tablist" aria-label="Mappe disponibili"></div><div class="concept-map" id="conceptMap" aria-live="polite"></div></div></div></section>
+
+      <section class="section tools-section dashboard-section" id="strumenti" aria-labelledby="toolsTitle"><div class="wrap"><p class="eyebrow dark">Strumenti</p><h2 id="toolsTitle">Ritrova, confronta, verifica</h2><div class="tool-grid"><button data-tool="glossary"><span>Ab</span><strong>Glossario</strong><small>Trenta termini con distinzioni essenziali.</small></button><button data-tool="timeline"><span>↝</span><strong>Cronologia</strong><small>Formazione, opere e revisioni teoriche.</small></button><button data-tool="library"><span>▤</span><strong>Biblioteca ragionata</strong><small>Dodici opere nel movimento della teoria.</small></button><button data-tool="comparisons"><span>⇄</span><strong>Confronti filosofici</strong><small>Cartesio, Nietzsche, Marx, Jung e scienze contemporanee.</small></button><button data-tool="quiz"><span>12</span><strong>Verifica finale</strong><small>Relazioni fra concetti e recupero mirato.</small></button><button data-tool="academics"><span>↗</span><strong>Fonti accademiche</strong><small>Università, archivi, musei e associazioni professionali.</small></button></div></div></section>
 
       <section class="closing dashboard-section"><div class="wrap narrow"><p class="eyebrow">La domanda che resta</p><blockquote>Se non siamo pienamente trasparenti a noi stessi, la libertà scompare oppure diventa un compito più difficile?</blockquote><p>Freud rende sospetta l’idea di un io sovrano che conosce immediatamente le proprie ragioni. Ma un modello interpretativo potente non diventa vero solo perché riesce a raccontare tutto.</p></div></section>
-
       <footer class="footer dashboard-footer"><p>Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.</p><p><a href="../">← Indice generale di Filosofia</a> · <button data-tool="academics" class="text-button">Fonti accademiche</button> · <button id="installButton" class="text-button">Installa la PWA</button></p></footer>
     </main>
 
-    <aside class="right-rail" aria-label="Strumenti di studio">
-      <section class="right-card">
-        <span class="rail-label">Strumenti di studio</span>
-        <button type="button" class="rail-tool" onclick="document.getElementById('searchButton').click()"><i>⌕</i><span><strong>Ricerca nei contenuti</strong><small>Cerca concetti, autori, opere.</small></span><b>›</b></button>
-        <a class="rail-tool" href="#mappe"><i>⌘</i><span><strong>Mappe concettuali</strong><small>Collega visivamente le idee.</small></span><b>›</b></a>
-        <button type="button" class="rail-tool" data-tool="glossary"><i>Ab</i><span><strong>Glossario</strong><small>Termini chiave della lezione.</small></span><b>›</b></button>
-        <button type="button" class="rail-tool" data-tool="academics"><i>▤</i><span><strong>Fonti e bibliografia</strong><small>Opere, articoli e archivi.</small></span><b>›</b></button>
-        <button type="button" class="rail-tool" onclick="document.getElementById('notesButton').click()"><i>✎</i><span><strong>Prendi appunti</strong><small>Il tuo taccuino salvato.</small></span><b>›</b></button>
-      </section>
-
-      <section class="right-card progress-widget">
-        <span class="rail-label">I tuoi progressi</span>
-        <div class="progress-layout"><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong><small>percorso<br>completato</small></div><div class="progress-copy"><strong id="progressLabel">0 di 12 tappe completate</strong><div class="progress-track"><span id="progressBar"></span></div><small>Il progresso resta sul dispositivo.</small></div></div>
-        <a class="resume-button" href="#studio">Riprendi il percorso</a>
-      </section>
-
-      <section class="right-card mode-card">
-        <span class="rail-label">Modalità di studio</span>
-        <button type="button" data-mode="amateur" class="mode-choice active"><span>◉</span><div><strong>Primo incontro</strong><small>Approccio introduttivo e guidato.</small></div><b>◉</b></button>
-        <button type="button" data-mode="student" class="mode-choice"><span>◎</span><div><strong>Studio filosofico</strong><small>Percorso completo e argomentato.</small></div><b>○</b></button>
-      </section>
-
-      <section class="right-card index-card">
-        <span class="rail-label">Collana</span>
-        <strong>Vuoi cambiare pensatore?</strong>
-        <a href="../" class="general-index-button">Vai all’indice generale →</a>
-      </section>
-    </aside>
+    <aside class="right-rail" aria-label="Strumenti di studio"><section class="right-card"><span class="rail-label">Strumenti di studio</span><button type="button" class="rail-tool" onclick="document.getElementById('searchButton').click()"><i>⌕</i><span><strong>Ricerca nei contenuti</strong><small>Cerca concetti, autori, opere.</small></span><b>›</b></button><a class="rail-tool" href="#mappe"><i>⌘</i><span><strong>Mappe concettuali</strong><small>Collega visivamente le idee.</small></span><b>›</b></a><a class="rail-tool" href="#seconda-topica"><i>Ψ</i><span><strong>Es · Io · Super-io</strong><small>Prima e seconda topica a confronto.</small></span><b>›</b></a><button type="button" class="rail-tool" data-tool="glossary"><i>Ab</i><span><strong>Glossario</strong><small>Termini chiave della lezione.</small></span><b>›</b></button><button type="button" class="rail-tool" data-tool="academics"><i>▤</i><span><strong>Fonti e bibliografia</strong><small>Opere, articoli e archivi.</small></span><b>›</b></button><button type="button" class="rail-tool" onclick="document.getElementById('notesButton').click()"><i>✎</i><span><strong>Prendi appunti</strong><small>Il tuo taccuino salvato.</small></span><b>›</b></button></section><section class="right-card progress-widget"><span class="rail-label">I tuoi progressi</span><div class="progress-layout"><div class="progress-ring" id="progressRing"><strong id="progressPercent">0%</strong><small>percorso<br>completato</small></div><div class="progress-copy"><strong id="progressLabel">0 di 12 tappe completate</strong><div class="progress-track"><span id="progressBar"></span></div><small>Il progresso resta sul dispositivo.</small></div></div><a class="resume-button" href="#studio">Riprendi il percorso</a></section><section class="right-card mode-card"><span class="rail-label">Modalità di studio</span><button type="button" data-mode="amateur" class="mode-choice active"><span>◉</span><div><strong>Primo incontro</strong><small>Approccio introduttivo e guidato.</small></div><b>◉</b></button><button type="button" data-mode="student" class="mode-choice"><span>◎</span><div><strong>Studio filosofico</strong><small>Percorso completo e argomentato.</small></div><b>○</b></button></section><section class="right-card index-card"><span class="rail-label">Collana</span><strong>Vuoi cambiare pensatore?</strong><a href="../" class="general-index-button">Vai all’indice generale →</a></section></aside>
   </div>
 
   <aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-backdrop" data-close="drawer"></div><div class="drawer-panel"><button class="close-button" id="drawerClose" aria-label="Chiudi il menu">×</button><p class="eyebrow">Freud</p><h2>Indice della lezione</h2><nav id="drawerNav"></nav><p><a class="general-index-button" href="../">Indice generale di Filosofia →</a></p><div class="drawer-progress"><span>Progresso</span><strong id="drawerProgress">0%</strong></div></div></aside>
@@ -217,6 +87,7 @@
   <dialog id="contentDialog" class="content-dialog"><button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button><div id="dialogContent"></div></dialog>
   <dialog id="searchDialog" class="search-dialog"><button class="dialog-close" id="searchClose" aria-label="Chiudi ricerca">×</button><p class="eyebrow dark">Ricerca interna</p><h2>Cerca un concetto</h2><label class="search-box"><span class="sr-only">Termine da cercare</span><input id="searchInput" type="search" placeholder="Per esempio: rimozione, sogno, Es, falsificabilità…" autocomplete="off"></label><div id="searchResults" class="search-results" aria-live="polite"></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="./data.js"></script><script src="./app.js"></script>
+  <script src="./data.js"></script><script src="./app.js"></script><script src="./topica.js"></script><script src="./comic-img-01.js"></script><script src="./comic-img-02.js"></script><script src="./comic-img-03.js"></script><script src="./comic-img-04.js"></script><script src="./comic-img-05.js"></script><script src="./comic-img-06.js"></script><script src="./comic-img-07.js"></script><script src="./comic-img-08.js"></script><script src="./comics.js"></script>
+  <script>(()=>{const pct=document.getElementById("progressPercent"),ring=document.getElementById("progressRing");if(!pct||!ring)return;const sync=()=>ring.style.setProperty("--progress",parseInt(pct.textContent,10)||0);new MutationObserver(sync).observe(pct,{childList:true,characterData:true,subtree:true});sync();})();</script>
 </body>
 </html>
