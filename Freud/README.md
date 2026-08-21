@@ -2,6 +2,12 @@
 
 PWA didattica statica della collana **Filosofia** di gbprof. Il percorso ricostruisce la nascita della psicoanalisi come problema storico, filosofico e clinico e distingue costantemente le tesi freudiane dallo stato attuale delle conoscenze psicologiche e neuroscientifiche.
 
+## Identità della PWA
+
+La home adotta la stessa logica visiva della collana: **dashboard didattica** con barra superiore, navigazione laterale, quattro ingressi principali, strumenti di studio, progresso salvato e modalità di lettura. Il collegamento all’**indice generale di Filosofia** è visibile nella barra superiore, nella colonna destra, nel menu mobile e nel footer.
+
+La dashboard usa come riferimento grafico il mockup approvato da gbprof: palette blu-notte e viola, hero cinematografico, quattro grandi accessi `Scopro`, `Studio`, `Approfondisco`, `A fumetti`, laboratori in evidenza e strumenti sempre raggiungibili.
+
 ## Domanda generatrice
 
 > Se una parte decisiva della nostra vita psichica agisce senza diventare cosciente, che cosa resta della libertà, della responsabilità e della conoscenza di noi stessi?
@@ -14,7 +20,7 @@ PWA didattica statica della collana **Filosofia** di gbprof. Il percorso ricostr
 - `A fumetti`: 8 scene biografiche documentate.
 - 3 laboratori interattivi: lavoro onirico, formazione di compromesso, forza e falsificabilità delle interpretazioni.
 - 5 mappe concettuali ingrandibili, glossario di 30 termini, cronologia, biblioteca ragionata, confronti filosofici, ricerca interna, taccuino locale con esportazione `.txt`, avanzamento salvato, regolazione del testo e verifica finale di 12 domande.
-- PWA installabile, offline dopo il primo caricamento, senza framework e senza dipendenze di build.
+- PWA installabile e utilizzabile offline dopo il primo caricamento, senza framework e senza dipendenze di build.
 
 ## Criterio scientifico e didattico
 
@@ -30,16 +36,16 @@ La PWA non presenta Es, Io e Super-io come regioni cerebrali; distingue prima e 
 - Sigmund Freud Museum Vienna — https://www.freud-museum.at/en/
 - International Psychoanalytical Association, *Our History* — https://www.ipa.world/IPADev/About__Us/Dev/Our_Org/our_history.aspx
 - UCL Psychoanalysis Unit — https://www.ucl.ac.uk/brain-sciences/pals/psychoanalysis
-- UCL Psychoanalysis Unit, *Free Association Today* — https://www.ucl.ac.uk/psychoanalysis/events/previous-events/2014/free-association-today
 - York University, Classics in the History of Psychology, *The Interpretation of Dreams* — https://psychclassics.yorku.ca/Freud/Dreams/index.htm
 - American Psychological Association, Dictionary of Psychology, *unconscious process* — https://dictionary.apa.org/unconscious-process
 - Mudrik, L. & Deouell, L. Y. (2022), *Neuroscientific Evidence for Processing Without Awareness*, Annual Review of Neuroscience 45 — https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-110920-033151
 
-## File
+## File principali
 
 ```text
 Freud/
 ├── index.html
+├── dashboard.css
 ├── styles.css
 ├── data.js
 ├── app.js
@@ -47,10 +53,11 @@ Freud/
 ├── sw.js
 ├── README.md
 └── assets/
+    ├── cover-freud-dashboard.webp
     ├── cover-freud.webp
     └── icon.svg
 ```
 
-La copertina è un’immagine originale locale, priva di dipendenze remote. Gli altri elementi visuali sono CSS/SVG originali e non richiedono attribuzioni esterne.
+`cover-freud-dashboard.webp` deriva dal mockup grafico approvato in fase di progettazione ed è salvata localmente; il funzionamento fondamentale della PWA non dipende da immagini remote.
 
 Materiali realizzati da gbprof e Libera (ChatGPT) tramite dialogo costante e progettazione comune, sotto la direzione di gbprof.
