@@ -1,0 +1,1 @@
+window.FREUD_DATA_READY=(async()=>{const p=['data-p1.js','data-p2.js','data-p3.js','data-p4.js','data-p5.js','data-p6.js','data-p7.js','data-p8.js','data-p9.js','data-p10.js','data-p11.js','data-p12.js','data-p13.js'],t=await Promise.all(p.map(x=>fetch('./'+x).then(r=>{if(!r.ok)throw new Error('data part '+x);return r.text()})));(0,eval)(t.join(''));return window.FREUD_DATA;})();
