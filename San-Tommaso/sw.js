@@ -1,4 +1,5 @@
-const VERSION='san-tommaso-v1.0.0';
+const CACHE_PREFIX='san-tommaso-';
+const VERSION=`${CACHE_PREFIX}v1.0.1`;
 const STATIC_CACHE=`${VERSION}-static`;
 const RUNTIME_CACHE=`${VERSION}-runtime`;
 const CORE=[
@@ -20,8 +21,13 @@ self.addEventListener('install',event=>{
 });
 
 self.addEventListener('activate',event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>![STATIC_CACHE,RUNTIME_CACHE].includes(key)).map(key=>caches.delete(key)))));
-  self.clients.claim();
+  event.waitUntil(
+    caches.keys().then(keys=>Promise.all(
+      keys
+        .filter(key=>key.startsWith(CACHE_PREFIX)&&![STATIC_CACHE,RUNTIME_CACHE].includes(key))
+        .map(key=>caches.delete(key))
+    )).then(()=>self.clients.claim())
+  );
 });
 
 function normalizedNavigation(request){
