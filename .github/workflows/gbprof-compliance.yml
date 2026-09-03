@@ -8,6 +8,10 @@ on:
       - 'pwa-common/**'
       - 'privacy.html'
       - 'accessibilita.html'
+      - '**/*.html'
+      - '**/*.js'
+      - '**/*.webmanifest'
+      - '**/manifest*.json'
   workflow_dispatch:
 permissions:
   contents: write
