@@ -4,6 +4,10 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/gbprof-compliance.yml'
+      - 'tools/**'
+      - 'pwa-common/**'
+      - 'privacy.html'
+      - 'accessibilita.html'
   workflow_dispatch:
 permissions:
   contents: write
@@ -17,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Installa lo standard gbprof
+      - name: Sincronizza lo standard gbprof
         run: |
           mkdir -p pwa-common tools
           curl -fsSL https://raw.githubusercontent.com/gb69prof/II-anno/main/privacy.html -o privacy.html
@@ -37,6 +41,6 @@ jobs:
           git config user.email "gb69prof@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Applica standard gbprof a tutte le PWA"
+            git commit -m "Aggiorna standard gbprof nelle PWA"
             git push
           fi
