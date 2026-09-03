@@ -1,12 +1,16 @@
 const CACHE="kant-doppio-percorso-v1";
-const CORE=["./","./index.html","./styles.css","./data.js","./app.js","./manifest.webmanifest","./assets/icon.svg","./assets/kant-hero.webp"];
+const CORE=[
+  "../pwa-common/gbprof-accessibility.css?v=1",
+  "../pwa-common/gbprof-accessibility.js?v=1",
+  "../privacy.html",
+  "../accessibilita.html","./","./index.html","./styles.css","./data.js","./app.js","./manifest.webmanifest","./assets/icon.svg","./assets/kant-hero.webp"];
 
 self.addEventListener("install",event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
   self.skipWaiting();
 });
 self.addEventListener("activate",event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))));
+  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key => key !== CACHE && key.startsWith(String(CACHE).includes("-v") ? String(CACHE).replace(/-v.*$/i, "-") : String(CACHE))).map(key=>caches.delete(key)))));
   self.clients.claim();
 });
 self.addEventListener("fetch",event=>{

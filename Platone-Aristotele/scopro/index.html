@@ -14,6 +14,7 @@
 @media(max-width:760px){.object-grid,.story,.lab{grid-template-columns:1fr}.object{min-height:190px}.map{grid-template-columns:1fr 1fr}.progress{width:105px}.hero{min-height:70vh}.scene{min-height:300px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.001ms!important}}
 </style>
+  <link rel="stylesheet" href="../../pwa-common/gbprof-accessibility.css?v=1">
 </head>
 <body>
 <header class="top"><a class="home" href="../" aria-label="Torna alla copertina">←</a><div class="topcopy"><strong>Scopro</strong><small>Per chi parte da zero</small></div><div class="progress" aria-label="Avanzamento"><div class="track"><div id="bar" class="bar"></div></div><small id="progressText">1 di 6</small></div></header>
@@ -40,4 +41,5 @@ document.querySelectorAll('[data-step]').forEach(s=>new IntersectionObserver(ent
 function say(t){clearTimeout(timer);toast.textContent=t;toast.classList.add('show');timer=setTimeout(()=>toast.classList.remove('show'),3000)}saveProgress.addEventListener('click',()=>{setStep(6);localStorage.setItem('pa-scopro-complete','1');say('Percorso Scopro completato e salvato su questo dispositivo.')});
 if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../sw.js',{updateViaCache:'none'}));
 </script>
+  <script src="../../pwa-common/gbprof-accessibility.js?v=1"></script>
 </body></html>

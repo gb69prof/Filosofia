@@ -2,6 +2,10 @@ const VERSION='san-tommaso-v1.0.0';
 const STATIC_CACHE=`${VERSION}-static`;
 const RUNTIME_CACHE=`${VERSION}-runtime`;
 const CORE=[
+  "../pwa-common/gbprof-accessibility.css?v=1",
+  "../pwa-common/gbprof-accessibility.js?v=1",
+  "../privacy.html",
+  "../accessibilita.html",
   './','./index.html','./manifest.webmanifest','./css/main.css','./js/app.js','./data/content.js',
   './assets/icons/icon.svg',
   './assets/images/tommaso-hero.webp','./assets/images/tommaso-hero.jpg',

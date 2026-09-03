@@ -1,5 +1,9 @@
 const CACHE='platone-aristotele-v30';
 const CORE=[
+  "../pwa-common/gbprof-accessibility.css?v=1",
+  "../pwa-common/gbprof-accessibility.js?v=1",
+  "../privacy.html",
+  "../accessibilita.html",
  './','./index.html','./home.js','./manifest.webmanifest','./assets/icon.svg',
  './scopro/','./scopro/index.html',
  './studio/','./studio/index.html','./studio/style.css','./studio/extra.css','./studio/data-platone.js','./studio/data-aristotele.js','./studio/glossary.js','./studio/comparisons.js','./studio/app.js','./studio/full-lesson.html','./studio/full-style.css','./studio/full-lessons-platone.js','./studio/full-lessons-aristotele.js','./studio/full-app.js',
@@ -17,7 +21,7 @@ const CORE=[
  './visita-accademia/assets/scenes/a1-maestro-metodo.webp','./visita-accademia/assets/scenes/a2-logica.webp','./visita-accademia/assets/scenes/a3-metafisica.webp','./visita-accademia/assets/scenes/a4-fisica.webp','./visita-accademia/assets/scenes/a5-biologia.webp','./visita-accademia/assets/scenes/a6-etica.webp','./visita-accademia/assets/scenes/a7-politica.webp','./visita-accademia/assets/scenes/a8-poetica.webp'
 ];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));self.skipWaiting()});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))));self.clients.claim()});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key => key !== CACHE && key.startsWith(String(CACHE).includes("-v") ? String(CACHE).replace(/-v.*$/i, "-") : String(CACHE))).map(key=>caches.delete(key)))));self.clients.claim()});
 self.addEventListener('fetch',event=>{
  if(event.request.method!=='GET')return;
  if(event.request.mode==='navigate'){

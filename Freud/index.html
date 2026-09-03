@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./dashboard.css">
   <link rel="stylesheet" href="./topica.css">
   <link rel="stylesheet" href="./comics.css">
+  <link rel="stylesheet" href="../pwa-common/gbprof-accessibility.css?v=1">
 </head>
 <body class="dashboard-body">
   <a class="skip-link" href="#main">Vai al contenuto</a>
@@ -89,5 +90,6 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./data.js"></script><script src="./app.js"></script><script src="./topica.js"></script><script src="./comic-img-01.js"></script><script src="./comic-img-02.js"></script><script src="./comic-img-03.js"></script><script src="./comic-img-04.js"></script><script src="./comic-img-05.js"></script><script src="./comic-img-06.js"></script><script src="./comic-img-07.js"></script><script src="./comic-img-08.js"></script><script src="./comics.js"></script>
   <script>(()=>{const pct=document.getElementById("progressPercent"),ring=document.getElementById("progressRing");if(!pct||!ring)return;const sync=()=>ring.style.setProperty("--progress",parseInt(pct.textContent,10)||0);new MutationObserver(sync).observe(pct,{childList:true,characterData:true,subtree:true});sync();})();</script>
+  <script src="../pwa-common/gbprof-accessibility.js?v=1"></script>
 </body>
 </html>
