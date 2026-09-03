@@ -21,17 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Sincronizza lo standard gbprof
+      - name: Applica e verifica lo standard gbprof
         run: |
-          mkdir -p pwa-common tools
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/II-anno/main/privacy.html -o privacy.html
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/II-anno/main/accessibilita.html -o accessibilita.html
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/pwa-common/gbprof-accessibility.css -o pwa-common/gbprof-accessibility.css
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/pwa-common/gbprof-accessibility.js -o pwa-common/gbprof-accessibility.js
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/tools/apply-pwa-standard.mjs -o tools/apply-pwa-standard.mjs
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/tools/cache-pwa-standard.mjs -o tools/cache-pwa-standard.mjs
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/tools/audit-pwa.mjs -o tools/audit-pwa.mjs
-          curl -fsSL https://raw.githubusercontent.com/gb69prof/V-anno/main/COMPLIANCE-PWA.md -o COMPLIANCE-PWA.md
           node tools/apply-pwa-standard.mjs
           node tools/cache-pwa-standard.mjs
           node tools/audit-pwa.mjs
