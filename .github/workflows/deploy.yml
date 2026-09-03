@@ -1,0 +1,25 @@
+name: Deploy to gbprof server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            cd /opt/gbprof/projects/Filosofia
+            git fetch origin
+            git reset --hard origin/main
+            echo "Deploy Filosofia completato"
+            git log -1 --oneline
