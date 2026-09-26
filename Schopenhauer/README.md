@@ -17,6 +17,6 @@ Il service worker conserva soltanto la cache con prefisso `gbprof-schopenhauer-`
 
 ## Collegamenti letterari
 
-Le nuove sezioni sono aggiunte alla fine degli articoli esistenti, senza riscriverne il testo: Foscolo/lezioni/immagine-del-mondo.html e alla-sera.html; Leopardi/pagine/natura-islandese.html e ginestra.html. Nei due service worker letterari viene incrementata solo la versione per aggiornare la copia offline.
+Le nuove sezioni sono aggiunte alla fine del testo argomentativo degli articoli esistenti (prima degli apparati estraibili in Leopardi), senza riscriverne il testo: Foscolo/lezioni/immagine-del-mondo.html e alla-sera.html; Leopardi/pagine/natura-islandese.html e ginestra.html. Nei due service worker letterari viene incrementata solo la versione per aggiornare la copia offline.
 
 Verga rimane un nodo futuro esplicitamente indicato: nessuna PWA dedicata o URL di autore inventato. Le relazioni fra gli autori sono interpretative e non affermazioni di influenza documentata.

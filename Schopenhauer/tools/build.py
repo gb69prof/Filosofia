@@ -122,7 +122,7 @@ source='''<p class="eyebrow">Leggere e verificare</p><h1>Fonti e metodo</h1><p>I
 manifest={'id':'./','name':'Schopenhauer — Filosofia e letteratura','short_name':'Schopenhauer','lang':'it','description':'Due percorsi di lettura, mappe e verifiche.','start_url':'./index.html','scope':'./','display':'standalone','background_color':'#f7f3eb','theme_color':'#264c43','icons':[{'src':'assets/icon-192.png','sizes':'192x192','type':'image/png','purpose':'any'},{'src':'assets/icon-512.png','sizes':'512x512','type':'image/png','purpose':'any'},{'src':'assets/icon-maskable-512.png','sizes':'512x512','type':'image/png','purpose':'maskable'}]}
 (ROOT/'manifest.webmanifest').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
 files=['./','./index.html','../pwa-common/gbprof-accessibility.css?v=1','../pwa-common/gbprof-accessibility.js?v=1','../privacy.html','../accessibilita.html']
-files+=['./'+p.relative_to(ROOT).as_posix() for p in sorted(ROOT.rglob('*')) if p.is_file() and p.suffix in ['.html','.css','.svg','.png','.webmanifest'] and p.name!='index.html']
+files+=['./'+p.relative_to(ROOT).as_posix() for p in sorted(ROOT.rglob('*')) if p.is_file() and 'tools' not in p.relative_to(ROOT).parts and p.suffix in ['.html','.css','.svg','.png','.webmanifest'] and p.name!='index.html']
 files+=['./app.js']
 worker='''const PREFIX='gbprof-schopenhauer-';
 const CACHE=PREFIX+'v1';
