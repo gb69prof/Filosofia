@@ -1,0 +1,70 @@
+{
+  "mode": "Built-in image_gen",
+  "style": "Use case: stylized-concept. Create one finished landscape 1536x1024 cinematic allegorical illustration for an Italian upper-secondary philosophy textbook website. Luxurious atmospheric realism, sophisticated romantic oil-painting sensibility, richly textured stone, weathered wood, fabric, subtle dust, warm amber light opposed to cool charcoal/teal shadow. Clear strong composition and emotionally meaningful human presence, believable anatomy. The attached image is ONLY a style reference for visual richness, architectural depth and dramatic light; do not copy its stories, labels or collage. No words, no letters, no labels, no logos, no watermarks. Not a diagram or infographic. No generic fantasy spectacle. It must make the philosophical problem visible through a specific coherent scene, with details readable at tablet size. ",
+  "scenes": [
+    {
+      "slug": "problema",
+      "prompt": "A young adult in a quiet nineteenth-century study stands before a huge translucent veil hanging inside an old stone arch. Through the veil the same landscape, trees and distant house remain recognizable but their outlines and light are conditioned by the fabric and window frame. On the near side a real table and book anchor perception. The person thoughtfully extends a hand toward the veil without pulling it away. Evoke the question of the limits of knowing: one world encountered through conditions, not a false world beside a revealed true one. The far side remains veiled and mysterious; do not depict a secret monster or a second universe."
+    },
+    {
+      "slug": "rappresentazione",
+      "prompt": "A human observer seen from behind in an old observatory looks at ONE landscape through an elegant enormous window. The mullions spatially organize fields, a subtle sequence of moving cloud shadows suggests time, and a falling branch touching the water makes expanding ripples show causal succession. A partial translucent geometric window projection falls onto floor and observer; it is a restrained architectural metaphor, not a technical grid diagram. The scene makes visible that a world becomes experience in relation to a subject through space, time and causality. Real landscape, not hallucination. Strong amber dawn, teal distance."
+    },
+    {
+      "slug": "corpo",
+      "prompt": "Intimate dramatic close composition of an adult in a nineteenth-century stone room lifting a heavy rough vessel from a table. Their visible hand and forearm show honest muscular effort, face concentrated, posture fully embodied. A mirror angled beside the action shows the same hand from outside, while warm reflected light falling across chest and palm suggests the lived intensity of exertion. ONE person, ONE continuous action, no ghost or separated soul, no anatomical cutaway, no magic energy. Outer visible movement and inner felt striving are two ways of knowing the same act."
+    },
+    {
+      "slug": "volonta",
+      "prompt": "Sweeping grounded allegorical landscape: foreground roots force through rock, at middle distance a deer struggles upstream and a human works against powerful wind, behind them a dark sea churns under massive indifferent clouds. Compose these forms along one continuous curving rhythm, repeated in roots, muscles and waves, suggesting relentless impersonal striving across nature. No deity, no gigantic person, no cosmic brain, no puppeteer, no visible magical energy substance. Light is dramatic but offers no promised destination; no endpoint or triumph."
+    },
+    {
+      "slug": "individuazione",
+      "prompt": "On a rocky riverbank two adults strain in opposite directions pulling the same long heavy rope to claim a scarce wooden water vessel. In the foreground the rope forms a single continuous loop, visually binding the rivals whose attention is fixed only on their own end. Their shadows divided by a seam in the stone, shared river and shared physical vulnerability. Powerful tragic composition of one striving turned against itself in distinct individuals. Non-violent competition, no injuries, no winner, no good-versus-evil coding."
+    },
+    {
+      "slug": "desiderio",
+      "prompt": "A circular ruined arcade surrounds an empty center. Show the same lone adult at three successive locations within this continuous architectural space: reaching urgently toward a golden cup on a plinth, holding the cup with brief relief, then seated beside it with an empty restless gaze already turned toward another lit arch. Subtle repeated identity and visual rhythm communicate desire, temporary satisfaction and boredom restarting desire. No arrows, no labels, no treasure extravaganza, no caricature. Long cinematic shadows, yearning and melancholy."
+    },
+    {
+      "slug": "pessimismo",
+      "prompt": "An immense indifferent coastline under storm clouds with a small human shelter, an adult protecting a child, a wind-bent tree and an exhausted animal all exposed to the same weather. No gore or disaster spectacle; quiet structural vulnerability across living beings. A magnificent world whose scale and movements do not answer the human need for happiness. Dense realistic surfaces and dim amber lamplight in the shelter, the storm not personified as a malicious face."
+    },
+    {
+      "slug": "arte",
+      "prompt": "Within an old stone hall opening onto a turbulent city of rushing shadowed figures, one absorbed listener stands beside a violinist. Still warm light surrounds their concentrated attention while outside the architecture a circular blur of purposeful movement continues. Evoke temporary suspension of grasping desire through artistic contemplation, not winning prestige or purchasing an object. The calm region remains visibly open to the moving world, a pause rather than permanent magical salvation. Rich amber wood, dark green cloth, beautiful human faces without celebrity likeness."
+    },
+    {
+      "slug": "compassione",
+      "prompt": "Two equally dignified adults shelter beside a ruined stone wall after a storm. One kneels to wrap their own cloak around the other's shoulders and offers a hand to help them rise; clear eye contact, neither saint nor helpless caricature. A shallow puddle reflects their two figures within one connected shape, gently suggesting a shared condition without erasing individual faces. Warm restrained light catches hands, cold rain recedes. Compassion is recognition and practical care, no halo, no charity spectacle."
+    },
+    {
+      "slug": "ascesi",
+      "prompt": "A living adult sits upright and peacefully alert in a simple stone doorway, hands gently open, beside a few possessions deliberately laid down: cup, purse, decorative garment. Beyond the doorway a busy circular path of reaching and acquiring continues in shadow. The person is neither dead nor disappearing, not starving, no self-harm, no cliff, no blade, no glowing ascent into heaven. Quiet renunciation of compulsive grasping, spare human dignity. Dawn illumination and unusually spacious composition."
+    },
+    {
+      "slug": "conclusione",
+      "prompt": "A single integrated old stone courtyard seen in depth. Foreground a figure stops gripping a long knotted cord that loops through the restless courtyard; open hands mark a change of relation to striving. Three spatially coherent passages beyond show absorbed contemplation of music, one person helping another, and a quiet spare threshold with a seated living figure. In far background the world continues moving. No hierarchy of saints, no path to suicide, no destruction of the world. A rich visual synthesis of representation, embodied striving and different responses without printed text."
+    },
+    {
+      "slug": "mondo-uomo",
+      "prompt": "A tiny traveler stands before vast ancient volcanic slopes, changing sea and night sky. Broken classical columns and a fading human-made celestial map on a stone floor expose humanity's old claim to the center. The actual sky and landscape continue with serene indifference, not hostility. A single broom flower grows in cracked rock near the traveler's foot. Make the crisis of an anthropocentric providential universe felt. No enormous conscious Nature woman and no personification equating nature with a metaphysical will."
+    },
+    {
+      "slug": "motore-uomo",
+      "prompt": "Three adjoining alcoves in a coherent nineteenth-century building, all opening onto the same horizon. In the first an adult leans forward under bodily effort to lift a burden, in the second a writer holds a cherished letter and shapes words in a book, in the third a young adult gazes beyond a hedge toward an unreachable vast luminous horizon. Different human motivations: embodied striving, passions that build values, unlimited desire beyond finite objects. Balanced visual distinction, no claim of one identical psychological explanation. No text in the books or letter readable."
+    },
+    {
+      "slug": "sofferenza",
+      "prompt": "Triptych-like architectural scene integrated into one weathered stone building without borders: on one side a person repeatedly reaches toward a distant light beyond an ever-long corridor; at center a fragile living tree and person exposed to indifferent wind; on the other side an empty chair, folded travel coat and a person holding a keepsake evoke loss and exile. These are different sources or interpretations of suffering: unfulfilled striving, natural vulnerability, historical and affective loss. Compassionate dignified atmosphere, no self-harm, no gore, no blaming those who suffer."
+    },
+    {
+      "slug": "salvezza",
+      "prompt": "Three luminous spaces within one ruined stone arcade, each a distinct response to finite vulnerable life. Left: two generations read a book and tend flowers at a modest memorial stone, human memory and poetry. Center: a still contemplative figure listens to music, with open ungrasping hands and a spare doorway beyond, different Schopenhauerian modes of loosening desire. Right: several ordinary people join hands and help rebuild a shelter beneath a distant immense volcano, solidarity without defeating nature. Equally dignified scenes, no single triumphant road to paradise. Rich amber and teal, cinematic realism."
+    },
+    {
+      "slug": "confronto-finale",
+      "prompt": "A monumental but human-scaled ruined courtyard under an immense indifferent sky. Three clearly differentiated inhabited arches: a family preserves memory in a book beside a memorial, a calm person opens their hands after laying down a knotted cord beside a musician, a group helps one another on volcanic ground with a small yellow broom flower. A FOURTH arch at the far edge is unoccupied and still under construction, with a folded fisherman's net and a closed wooden chest: an unfinished future inquiry into social and economic life, not a developed fourth answer. No author portraits or text. The same exposed world, different meaningful human responses. Beautiful restrained emotional force."
+    }
+  ]
+}

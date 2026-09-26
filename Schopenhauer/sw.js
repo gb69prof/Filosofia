@@ -1,5 +1,5 @@
 const PREFIX='gbprof-schopenhauer-';
-const CACHE=PREFIX+'v3';
+const CACHE=PREFIX+'v4';
 const CORE=[
   "./",
   "./index.html",
@@ -30,15 +30,23 @@ const CORE=[
   "./assets/mappa-salvezza.svg",
   "./assets/mappa-sofferenza.svg",
   "./assets/mappa-volonta.svg",
+  "./assets/scene/arte.webp",
+  "./assets/scene/ascesi.webp",
+  "./assets/scene/compassione.webp",
+  "./assets/scene/conclusione.webp",
+  "./assets/scene/confronto-finale.webp",
+  "./assets/scene/corpo.webp",
+  "./assets/scene/desiderio.webp",
+  "./assets/scene/individuazione.webp",
+  "./assets/scene/mondo-uomo.webp",
+  "./assets/scene/motore-uomo.webp",
+  "./assets/scene/pessimismo.webp",
+  "./assets/scene/problema.webp",
+  "./assets/scene/rappresentazione.webp",
+  "./assets/scene/salvezza.webp",
+  "./assets/scene/sofferenza.webp",
+  "./assets/scene/volonta.webp",
   "./assets/schopenhauer-ritratto.png",
-  "./assets/simbolo-ciclo.svg",
-  "./assets/simbolo-corpo.svg",
-  "./assets/simbolo-distacco.svg",
-  "./assets/simbolo-flusso.svg",
-  "./assets/simbolo-incontro.svg",
-  "./assets/simbolo-paesaggio.svg",
-  "./assets/simbolo-sguardo.svg",
-  "./assets/simbolo-tregua.svg",
   "./compassione.html",
   "./comprendere.html",
   "./conclusione.html",
@@ -61,7 +69,7 @@ const CORE=[
   "./volonta.html",
   "./app.js",
   "./app.js?v=2",
-  "./styles.css?v=2"
+  "./styles.css?v=4"
 ];
 const BASE=new URL('./',self.location.href);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));});

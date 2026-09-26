@@ -1,6 +1,6 @@
 # Schopenhauer — Filosofia e letteratura
 
-Ambiente statico in italiano, senza dipendenze di rete necessarie alla lettura. Due percorsi: 11 lezioni filosofiche, 4 confronti per problemi e una conclusione comparativa. 16 mappe SVG con alternative testuali, diagrammi simbolici, 24 quesiti con correzione e recupero.
+Ambiente statico in italiano, senza dipendenze di rete necessarie alla lettura. Due percorsi: 11 lezioni filosofiche, 4 confronti per problemi e una conclusione comparativa. 16 mappe SVG con alternative testuali, 16 scene allegoriche generate con IA, 24 quesiti con correzione e recupero.
 
 - Entrata: `index.html`.
 - Indici: `comprendere.html`, `letteratura.html`.
@@ -20,3 +20,9 @@ Il service worker conserva soltanto la cache con prefisso `gbprof-schopenhauer-`
 Le nuove sezioni sono aggiunte alla fine del testo argomentativo degli articoli esistenti (prima degli apparati estraibili in Leopardi), senza riscriverne il testo: Foscolo/lezioni/immagine-del-mondo.html e alla-sera.html; Leopardi/pagine/natura-islandese.html e ginestra.html. Nei due service worker letterari viene incrementata solo la versione per aggiornare la copia offline.
 
 Verga rimane un nodo futuro esplicitamente indicato: nessuna PWA dedicata o URL di autore inventato. Le relazioni fra gli autori sono interpretative e non affermazioni di influenza documentata.
+
+## Immagini delle lezioni
+
+Le 16 scene sono in `assets/scene/`, in formato WebP a 1536 × 1024 pixel. Sono immagini allegoriche, non ricostruzioni storiche: le chiavi di lettura e le alternative testuali sono in `tools/visuals.py`. Le immagini si aprono in grande al clic e sono precaricate per la lettura offline. La home mantiene il ritratto con il video.
+
+Lo stile e i prompt delle singole scene sono conservati in `tools/visual-prompts.json`; generazione tramite lo strumento integrato image_gen, senza CLI/API esterne. Le mappe concettuali in SVG conservano la funzione distinta di sintesi delle relazioni.
