@@ -1,5 +1,15 @@
 'use strict';
 (() => {
+  document.querySelector('[data-play-video]')?.addEventListener('click',()=>{
+    const frame=document.createElement('iframe');
+    frame.src='https://www.youtube-nocookie.com/embed/UgtPIRq3RF8?autoplay=1&playsinline=1&rel=0';
+    frame.title='Video su Schopenhauer';
+    frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    frame.allowFullscreen=true;
+    frame.referrerPolicy='strict-origin-when-cross-origin';
+    document.querySelector('[data-hero-video]').replaceChildren(frame);
+    frame.focus();
+  },{once:true});
   const safeGet = key => {try {return sessionStorage.getItem(key);}catch{return null;}};
   const safeSet = (key,value) => {try {sessionStorage.setItem(key,value);}catch{}};
   const shuffle = (items,key) => {

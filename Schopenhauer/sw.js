@@ -1,5 +1,5 @@
 const PREFIX='gbprof-schopenhauer-';
-const CACHE=PREFIX+'v1';
+const CACHE=PREFIX+'v2';
 const CORE=[
   "./",
   "./index.html",
@@ -30,6 +30,7 @@ const CORE=[
   "./assets/mappa-salvezza.svg",
   "./assets/mappa-sofferenza.svg",
   "./assets/mappa-volonta.svg",
+  "./assets/schopenhauer-ritratto.png",
   "./assets/simbolo-ciclo.svg",
   "./assets/simbolo-corpo.svg",
   "./assets/simbolo-distacco.svg",
