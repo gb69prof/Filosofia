@@ -30,7 +30,7 @@ def toc(active=''):
  return ''.join(out)
 def page(title,body,active='',wide=False,extra=''):
  content=body if wide else f'<div class="layout">{toc(active)}<main id="main" class="reading" tabindex="-1">{body}</main></div>'
- return f'''<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#264c43"><meta name="description" content="Schopenhauer e la letteratura: un ambiente di lettura, mappe e verifiche per gbprof."><title>{escape(title)} · Schopenhauer · gbprof</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="../pwa-common/gbprof-accessibility.css?v=1"><script src="app.js" defer></script><script src="../pwa-common/gbprof-accessibility.js?v=1" defer></script>{extra}</head><body><a class="skip" href="#main">Vai al contenuto</a><header class="topbar"><a class="brand" href="index.html">SCHOPENHAUER · gbprof</a><nav aria-label="Navigazione principale"><a href="comprendere.html">Comprendere</a><a href="letteratura.html">Letteratura</a><a href="verifica.html">Verifica</a><a href="../index.html">Filosofia</a></nav></header>{content}<footer>gbprof e Libera · Ambiente di studio · <a href="fonti.html">Fonti e metodo</a><p class="status" data-offline role="status">Preparazione della copia offline…</p></footer></body></html>'''
+ return f'''<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#264c43"><meta name="description" content="Schopenhauer e la letteratura: un ambiente di lettura, mappe e verifiche per gbprof."><title>{escape(title)} · Schopenhauer · gbprof</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="stylesheet" href="styles.css{"?v=2" if wide else ""}"><link rel="stylesheet" href="../pwa-common/gbprof-accessibility.css?v=1"><script src="app.js{"?v=2" if wide else ""}" defer></script><script src="../pwa-common/gbprof-accessibility.js?v=1" defer></script>{extra}</head><body><a class="skip" href="#main">Vai al contenuto</a><header class="topbar"><a class="brand" href="index.html">SCHOPENHAUER · gbprof</a><nav aria-label="Navigazione principale"><a href="comprendere.html">Comprendere</a><a href="letteratura.html">Letteratura</a><a href="verifica.html">Verifica</a><a href="../index.html">Filosofia</a></nav></header>{content}<footer>gbprof e Libera · Ambiente di studio · <a href="fonti.html">Fonti e metodo</a><p class="status" data-offline role="status">Preparazione della copia offline…</p></footer></body></html>'''
 
 def symbol(name):
  start=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img"><title>{escape(name)}</title><rect width="900" height="330" fill="#e9e9dc"/><g fill="none" stroke="#365a4e" stroke-width="3">'
@@ -123,9 +123,9 @@ manifest={'id':'./','name':'Schopenhauer — Filosofia e letteratura','short_nam
 (ROOT/'manifest.webmanifest').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
 files=['./','./index.html','../pwa-common/gbprof-accessibility.css?v=1','../pwa-common/gbprof-accessibility.js?v=1','../privacy.html','../accessibilita.html']
 files+=['./'+p.relative_to(ROOT).as_posix() for p in sorted(ROOT.rglob('*')) if p.is_file() and 'tools' not in p.relative_to(ROOT).parts and p.suffix in ['.html','.css','.svg','.png','.webmanifest'] and p.name!='index.html']
-files+=['./app.js']
+files+=['./app.js','./app.js?v=2','./styles.css?v=2']
 worker='''const PREFIX='gbprof-schopenhauer-';
-const CACHE=PREFIX+'v2';
+const CACHE=PREFIX+'v3';
 const CORE=__CORE__;
 const BASE=new URL('./',self.location.href);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));});

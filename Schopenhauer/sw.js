@@ -1,5 +1,5 @@
 const PREFIX='gbprof-schopenhauer-';
-const CACHE=PREFIX+'v2';
+const CACHE=PREFIX+'v3';
 const CORE=[
   "./",
   "./index.html",
@@ -59,7 +59,9 @@ const CORE=[
   "./styles.css",
   "./verifica.html",
   "./volonta.html",
-  "./app.js"
+  "./app.js",
+  "./app.js?v=2",
+  "./styles.css?v=2"
 ];
 const BASE=new URL('./',self.location.href);
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));});
